@@ -42,7 +42,7 @@ flsFunctions.menuOpen();
 Документация:
 Сниппет (HTML): spollers
 */
-//flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль работы с табами
@@ -91,10 +91,10 @@ flsForms.formFieldsInit();
 Подключение плагина hystModal и настройка выполняется в файле js/files/popups.js
 Документация по работе в шаблоне:
 Документация плагина: https://addmorescripts.github.io/hystModal/index_ru.html
-Сниппет (HTML): pl 
+Сниппет (HTML): pl
 */
 // Для подключения в шаблон раскомментировать
-//import "./files/popups.js";
+import "./files/popups.js";
 
 // Модуль работы с подсказками (tippy) ====================================================================================================================================================================================================================================================================================
 /*
@@ -122,7 +122,7 @@ flsForms.formFieldsInit();
 Изменение дизайна сролбара
 Документация по работе в шаблоне: В HTML добавляем к блоку атрибут data-simplebar
 Документация плагина: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
-Сниппет(HTML): 
+Сниппет(HTML):
 */
 //import './files/scroll/simplebar.js';
 

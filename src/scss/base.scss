@@ -11,6 +11,9 @@
 // Стили карт
 // @import "base/maps";
 
+//попапы
+@import "base/popup";
+
 // Стили для полноєкранного блока
 [data-fullscreen] {
 	height: 100vh;
@@ -118,4 +121,9 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
+%btnreset{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
