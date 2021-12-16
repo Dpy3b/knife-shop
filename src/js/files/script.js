@@ -9,7 +9,7 @@ function documentActions(e) {
         const subMenu = document.querySelectorAll(`[data-submenu="${subMenuId}"]`);
         const catalogMenu = document.querySelectorAll('.catalog-header');
         if(subMenu){
-            catalogMenu.classList.toggle('_submenu-show');
+            catalogMenu.classList.toggle('_submenu-show')
             targetElement.classList.toggle('_submenu-active');
             subMenu.classList.toggle('_submenu-open');
         }else{

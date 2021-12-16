@@ -12,7 +12,7 @@ import { isMobile, _slideUp, _slideDown, _slideToggle } from "../functions.js";
 Особые проверки:
 data-required="email" - вадидация E-mail
 
-Чтобы поле валидировалось при потере фокуса, 
+Чтобы поле валидировалось при потере фокуса,
 к атрибуту data-required добавляем атрибут data-validate
 */
 
@@ -253,7 +253,7 @@ export function formRating() {
 			const ratingActiveWidth = index / 0.05;
 			ratingActive.style.width = `${ratingActiveWidth}%`;
 		}
-		// Возможность указать оценку 
+		// Возможность указать оценку
 		function setRating(rating) {
 			const ratingItems = rating.querySelectorAll('.rating__item');
 			for (let index = 0; index < ratingItems.length; index++) {
