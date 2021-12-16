@@ -2,7 +2,6 @@ gulpfile.js
 package.json
 package-lock.json
 node_modules/
-dist/
 Source/
 version.json
 **/*.zip
