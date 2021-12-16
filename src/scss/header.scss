@@ -281,10 +281,6 @@
 }
 
 //==================================================================================================================================================================================
-
-.header {
-
-}
 .catalog-header {
 	background-color: $mainDarkColor;
 	color: $white;
@@ -363,7 +359,7 @@
 	&__block {
 		display: none;
 		justify-content: space-between;
-		&.submenu-open{
+		&._submenu-open{
 			display: flex;
 		}
 	}
