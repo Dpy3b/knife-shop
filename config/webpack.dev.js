@@ -104,6 +104,9 @@ const config = {
 					from: `${srcFolder}/files`, to: `files`,
 					noErrorOnMissing: true,
 					force: true
+				}, {
+					from: `${paths.src}/favicon.ico`, to: `./`,
+					noErrorOnMissing: true
 				}
 			],
 		}),

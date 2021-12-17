@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -45,13 +45,13 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров
-	if (document.querySelector('.swiper')) {
-		new Swiper('.swiper', {
+	if (document.querySelector('.body-main-slider')) {
+		new Swiper('.body-main-slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			//modules: [Navigation, Pagination],
-			/*
+			modules: [Pagination, EffectFade],
 			effect: 'fade',
+			/*
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
@@ -61,23 +61,25 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
-			autoHeight: true,
+			//autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			//pagination: {
-			//	el: '.slider-quality__pagging',
-			//	clickable: true,
-			//},
+			pagination: {
+				el: '.body-main-slider__controll',
+				clickable: true,
+			},
 			// Arrows
+			/*
 			navigation: {
 				nextEl: '.about__more .more__item_next',
 				prevEl: '.about__more .more__item_prev',
 			},
+			*/
 			/*
 			breakpoints: {
 				320: {

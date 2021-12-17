@@ -1,4 +1,4 @@
-// Импорт функционала 
+// Подключение функционала "Чертогов Фрилансера"
 import { isMobile, uniqArray } from "../files/functions.js";
 
 // Наблюдатель объектов [всевидещее око]
@@ -13,11 +13,10 @@ export class ScrollWatcher {
 	constructor(props) {
 		let defaultConfig = {
 			logging: false,
-			callback: () => { },
 		}
 		this.config = Object.assign(defaultConfig, props);
 		this.observer;
-		this.scrollWatcherRun();
+		!document.documentElement.classList.contains('watcher') ? this.scrollWatcherRun() : null;
 	}
 	// Обновляем конструктор
 	scrollWatcherUpdate() {
@@ -141,8 +140,24 @@ export class ScrollWatcher {
 		// Обработка базовых действий точек срабатываения
 		this.scrollWatcherIntersecting(entry, targetElement);
 		// Если есть атрибут data-watch-once убираем слежку
-		targetElement.hasAttribute('data-watch-once') && entry.isIntersecting ? scrollWatcherOff(targetElement, observer) : null;
+		targetElement.hasAttribute('data-watch-once') && entry.isIntersecting ? this.scrollWatcherOff(targetElement, observer) : null;
+		// Создаем свое событие отбратной связи
+		document.dispatchEvent(new CustomEvent("watcherCallback", {
+			detail: {
+				entry: entry
+			}
+		}));
 
-		this.config.callback(entry, observer);
+		/*
+		// Выбираем нужные объекты
+		if (targetElement.dataset.watch === 'some value') {
+			// пишем уникальную специфику
+		}
+		if (entry.isIntersecting) {
+			// Видим объект
+		} else {
+			// Не видим объект
+		}
+		*/
 	}
 }

@@ -5,30 +5,25 @@
 // Стили спойлеров
 // @import "base/spollers";
 
+// Стили попапов
+@import "base/popup";
+
 // Стили табов
 // @import "base/tabs";
 
 // Стили карт
 // @import "base/maps";
 
-//попапы
-@import "base/popup";
+// Стили блока "показать еще"
+// @import "base/showmore";
 
-// Стили для полноєкранного блока
-[data-fullscreen] {
-	height: 100vh;
-	.touch & {
-		height: calc(var(--vh, 1vh) * 100);
-		@media (max-width: $mobile) {
-			transition: height 0.2s;
-		}
-	}
-}
+// Стили для полноэкранного блока
+@import "base/fullscreen";
 
 // Стили для отзывчивых картинок (IBG)
 // Сниппет (HTML): ibg (div c картинкой и классами)
 // Сниппет (HTML): ibga (a c картинкой и классами)
-[class*="__image-ibg"] {
+[class*="-ibg"] {
 	position: relative;
 	img {
 		position: absolute;
@@ -37,6 +32,11 @@
 		top: 0;
 		left: 0;
 		object-fit: cover;
+	}
+}
+[class*="-ibg_contain"] {
+	img {
+		object-fit: contain;
 	}
 }
 
@@ -121,6 +121,9 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
+%cuf {
+	font-family: CormorantUpright;
 }
 %btnreset{
 	background-color: transparent;

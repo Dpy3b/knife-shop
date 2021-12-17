@@ -6,44 +6,38 @@
 	&__item {
 		position: relative;
 		cursor: pointer;
-		&._error {
+		&:not(:last-child) {
+			margin-bottom: em(5);
 		}
 	}
 	// .options__input
 	&__input {
-		position: absolute;
 		width: 0;
 		height: 0;
 		opacity: 0;
-		left: 0;
-		top: 0;
-		visibility: hidden;
-		&:checked + .options__text:before {
+		position: absolute;
+		&:focus + .options__label:before {
+			box-shadow: 0 0 5px #000;
 		}
-		&:checked + .options__text:after {
+		&:checked + .options__label:before {
+		}
+		&:checked + .options__label:after {
 			transform: scale(1);
 		}
 	}
-	// .options__text
-	&__text {
+	// .options__label
+	&__label {
 		display: inline-flex;
 		align-items: center;
-		position: relative;
-		font-size: 16px;
-		color: #ffffff;
-		letter-spacing: -0.3px;
-		line-height: calc(20 / 16);
+		cursor: pointer;
+		gap: 10px;
 		&:before {
 			content: "";
 			align-self: flex-start;
-			margin: 0px 14px 0px 0px;
-			flex: 0 0 20px;
-			left: 0;
-			top: 0;
-			border-radius: 50%;
 			width: 20px;
-			height: 18px;
-			background: #fff;
+			height: 20px;
+			flex: 0 0 20px;
+			border-radius: 50%;
 			border: 1px solid #a7a9ac;
 		}
 		&:after {
@@ -56,7 +50,10 @@
 			background-color: #77243a;
 			position: absolute;
 			left: 5px;
-			top: 4px;
+			top: 5px;
 		}
+	}
+	// .options__text
+	&__text {
 	}
 }

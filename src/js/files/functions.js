@@ -49,43 +49,42 @@ export function fullVHfix() {
 		fixHeight();
 	}
 }
-//==== Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
-export let _slideUp = (target, duration = 500) => {
+// Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
+export let _slideUp = (target, duration = 500, showmore = 0) => {
 	if (!target.classList.contains('_slide')) {
 		target.classList.add('_slide');
 		target.style.transitionProperty = 'height, margin, padding';
 		target.style.transitionDuration = duration + 'ms';
-		target.style.height = target.offsetHeight + 'px';
+		target.style.height = `${target.offsetHeight}px`;
 		target.offsetHeight;
 		target.style.overflow = 'hidden';
-		target.style.height = 0;
+		target.style.height = showmore ? `${showmore}px` : `0px`;
 		target.style.paddingTop = 0;
 		target.style.paddingBottom = 0;
 		target.style.marginTop = 0;
 		target.style.marginBottom = 0;
 		window.setTimeout(() => {
-			target.hidden = true;
-			target.style.removeProperty('height');
+			target.hidden = !showmore ? true : false;
+			!showmore ? target.style.removeProperty('height') : null;
 			target.style.removeProperty('padding-top');
 			target.style.removeProperty('padding-bottom');
 			target.style.removeProperty('margin-top');
 			target.style.removeProperty('margin-bottom');
-			target.style.removeProperty('overflow');
+			!showmore ? target.style.removeProperty('overflow') : null;
 			target.style.removeProperty('transition-duration');
 			target.style.removeProperty('transition-property');
 			target.classList.remove('_slide');
 		}, duration);
 	}
 }
-export let _slideDown = (target, duration = 500) => {
+export let _slideDown = (target, duration = 500, showmore = 0) => {
 	if (!target.classList.contains('_slide')) {
 		target.classList.add('_slide');
-		if (target.hidden) {
-			target.hidden = false;
-		}
+		target.hidden = target.hidden ? false : null;
+		showmore ? target.style.removeProperty('height') : null;
 		let height = target.offsetHeight;
 		target.style.overflow = 'hidden';
-		target.style.height = 0;
+		target.style.height = showmore ? `${showmore}px` : `0px`;
 		target.style.paddingTop = 0;
 		target.style.paddingBottom = 0;
 		target.style.marginTop = 0;
@@ -114,7 +113,7 @@ export let _slideToggle = (target, duration = 500) => {
 		return _slideUp(target, duration);
 	}
 }
-//==== Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
+// Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;
 export let bodyLockToggle = (delay = 500) => {
 	if (document.documentElement.classList.contains('lock')) {
@@ -126,7 +125,7 @@ export let bodyLockToggle = (delay = 500) => {
 export let bodyUnlock = (delay = 500) => {
 	let body = document.querySelector("body");
 	if (bodyLockStatus) {
-		let lock_padding = document.querySelectorAll("._lp");
+		let lock_padding = document.querySelectorAll("[data-lp]");
 		setTimeout(() => {
 			for (let index = 0; index < lock_padding.length; index++) {
 				const el = lock_padding[index];
@@ -144,7 +143,7 @@ export let bodyUnlock = (delay = 500) => {
 export let bodyLock = (delay = 500) => {
 	let body = document.querySelector("body");
 	if (bodyLockStatus) {
-		let lock_padding = document.querySelectorAll("._lp");
+		let lock_padding = document.querySelectorAll("[data-lp]");
 		for (let index = 0; index < lock_padding.length; index++) {
 			const el = lock_padding[index];
 			el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
@@ -158,14 +157,14 @@ export let bodyLock = (delay = 500) => {
 		}, delay);
 	}
 }
-//==== Модуь работы со спойлерами =======================================================================================================================================================================================================================
+// Модуь работы со спойлерами =======================================================================================================================================================================================================================
 /*
 Для родителя слойлеров пишем атрибут data-spollers
 Для заголовков слойлеров пишем атрибут data-spoller
 Если нужно включать\выключать работу спойлеров на разных размерах экранов
 пишем параметры ширины и типа брейкпоинта.
 
-Например:
+Например: 
 data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
 data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
 
@@ -281,15 +280,15 @@ export function spollers() {
 		}
 	}
 }
-//==== Модуь работы с табами =======================================================================================================================================================================================================================
+// Модуь работы с табами =======================================================================================================================================================================================================================
 /*
 Для родителя табов пишем атрибут data-tabs
 Для родителя заголовков табов пишем атрибут data-tabs-titles
 Для родителя блоков табов пишем атрибут data-tabs-body
 
-Если нужно чтобы табы открывались с анимацией
+Если нужно чтобы табы открывались с анимацией 
 добавляем к data-tabs data-tabs-animate
-По умолчанию, скорость анимации 500ms,
+По умолчанию, скорость анимации 500ms, 
 указать свою скорость можно так: data-tabs-animate="1000"
 
 Если нужно чтобы табы превращались в "спойлеры" на неком размере экранов пишем параметры ширины.
@@ -437,8 +436,8 @@ export function tabs() {
 	}
 	function setTabsAction(e) {
 		const el = e.target;
-		if (el.closest('[data-tabs-title]') || el.hasAttribute('[data-tabs-title]')) {
-			const tabTitle = el;
+		if (el.closest('[data-tabs-title]')) {
+			const tabTitle = el.closest('[data-tabs-title]');
 			const tabsBlock = tabTitle.closest('[data-tabs]');
 			if (!tabTitle.classList.contains('_tab-active') && !tabsBlock.querySelectorAll('._slide').length) {
 
@@ -454,8 +453,8 @@ export function tabs() {
 		}
 	}
 }
-//==== Модуь работы с меню (бургер) =======================================================================================================================================================================================================================
-export function menuOpen() {
+// Модуь работы с меню (бургер) =======================================================================================================================================================================================================================
+export function menuInit() {
 	let iconMenu = document.querySelector(".icon-menu");
 	if (iconMenu) {
 		iconMenu.addEventListener("click", function (e) {
@@ -466,19 +465,99 @@ export function menuOpen() {
 		});
 	};
 }
+export function menuOpen() {
+	bodyLock();
+	document.documentElement.classList.add("menu-open");
+}
 export function menuClose() {
+	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
 }
-// Модуль "показать еще" (в работе) =======================================================================================================================================================================================================================
-
+// Модуль "показать еще" =======================================================================================================================================================================================================================
 /*
 Документация по работе в шаблоне:
-Документация плагина:
-Сниппет (HTML):
+data-showmore="size/items"
+data-showmore-content="размер/кол-во"
+data-showmore-button="скорость"
+Сниппет (HTML): showmore
 */
 export function showMore() {
-
+	const showMoreBlocks = document.querySelectorAll('[data-showmore]');
+	if (showMoreBlocks.length) {
+		initItems(showMoreBlocks);
+		document.addEventListener("click", showMoreActions);
+		window.addEventListener("resize", showMoreActions);
+	}
+	function initItems(showMoreBlocks) {
+		showMoreBlocks.forEach(showMoreBlock => {
+			initItem(showMoreBlock);
+		});
+	}
+	function initItem(showMoreBlock) {
+		const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
+		const showMoreButton = showMoreBlock.querySelector('[data-showmore-button]');
+		const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+		if (hiddenHeight < getOriginalHeight(showMoreContent)) {
+			_slideUp(showMoreContent, 0, hiddenHeight);
+			showMoreButton.hidden = false;
+		}
+	}
+	function getHeight(showMoreBlock, showMoreContent) {
+		let hiddenHeight = 0;
+		const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
+		if (showMoreType === 'items') {
+			const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
+			const showMoreItems = showMoreContent.children;
+			for (let index = 1; index < showMoreItems.length; index++) {
+				const showMoreItem = showMoreItems[index - 1];
+				hiddenHeight += showMoreItem.offsetHeight;
+				if (index === showMoreTypeValue) break;
+			}
+		} else {
+			const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
+			hiddenHeight = showMoreTypeValue;
+		}
+		return hiddenHeight;
+	}
+	function getOriginalHeight(showMoreContent) {
+		let hiddenHeight = showMoreContent.offsetHeight;
+		showMoreContent.style.removeProperty('height');
+		let originalHeight = showMoreContent.offsetHeight;
+		showMoreContent.style.height = `${hiddenHeight}px`;
+		return originalHeight;
+	}
+	function showMoreActions(e) {
+		const targetEvent = e.target;
+		const targetType = e.type;
+		if (targetType === 'click') {
+			if (targetEvent.closest('[data-showmore-button]')) {
+				const showMoreButton = targetEvent.closest('[data-showmore-button]');
+				const showMoreBlock = showMoreButton.closest('[data-showmore]');
+				const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
+				const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : '500';
+				const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+				if (!showMoreContent.classList.contains('_slide')) {
+					showMoreBlock.classList.contains('_showmore-active') ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+					showMoreBlock.classList.toggle('_showmore-active');
+				}
+			}
+		} else if (targetType === 'resize') {
+			initItems(showMoreBlocks);
+		}
+	}
 }
+
+// Модуль попапов ===========================================================================================================================================================================================================================
+/*
+Документация по работе в шаблоне:
+data-popup - Атрибут для кнопки, которая вызывает попап
+data-close - Атрибут для кнопки, которая закрывает попап
+data-youtube - Атрибут для кода youtube
+Сниппет (HTML): pl
+*/
+import { Popup } from "../libs/popup.js";
+export const initPopups = (logging = false, init = true) => new Popup({ logging: logging, init: init });
+
 //================================================================================================================================================================================================================================================================================================================
 // Прочие полезные функции ================================================================================================================================================================================================================================================================================================================
 //================================================================================================================================================================================================================================================================================================================
@@ -503,5 +582,10 @@ export function uniqArray(array) {
 		return self.indexOf(item) === index;
 	});
 }
+// Функция получения индекса внутри родителя
+export function indexInParent(parent, element) {
+	const array = Array.prototype.slice.call(parent.children);
+	return Array.prototype.indexOf.call(array, element);
+};
 
 //================================================================================================================================================================================================================================================================================================================
