@@ -339,7 +339,7 @@
 	&__submenu {
 		position: absolute;
 		width: 100%;
-		top: 100%;
+		top: calc(100% - 1px);
 		left: 0;
 		background-color: $mainDarkColor;
 		opacity: 0;
@@ -349,7 +349,6 @@
 			opacity: 1;
 			pointer-events: auto;
 		}
-
 	}
 }
 .submenu-catalog {
@@ -357,9 +356,13 @@
 	&__block {
 		padding: 0 rem(10);
 		display: none;
+		@for $var from 1 to 6 {
+			&--#{$var}{
+				grid-template-columns: repeat($var, minmax(auto, rem(320)));
+			}
+		}
 		&._submenu-open{
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
 		}
 	}
 	// .submenu-catalog__container
@@ -368,11 +371,10 @@
 	}
 	// .submenu-catalog__category
 	&__category {
-		align-self: flex-start; //чтобы не растягивался на 100%
 		font-size: rem(16);
 		line-height: math.div(20, 16);
 		font-weight: 700;
-		padding: rem(30) rem(15);
+		padding: rem(30) rem(15) rem(30) 0;
 		@media (any-hover: hover){
 			&:hover{
 				text-decoration: underline;
@@ -385,7 +387,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px; //тут типа гап вместо паддинга, поэтому запись padding: 0px rem(10) rem(30); не подойдет
-		padding: rem(30) rem(15);
+		padding: rem(30) 0;
 		border-top: 1px solid rgba(255, 255, 255, 0.3);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 	}
@@ -409,11 +411,14 @@
 			}
 		}
 	}
+	// .submenu-catalog__footer
+	&__footer{
+		padding: rem(30) 0;
+	}
 	// .submenu-catalog__all
 	&__all {
 		align-self: flex-start; //чтобы не растягивался на 100%
 		font-size: rem(16);
-		padding: rem(30) rem(15); //вот тут паддинга вниз не должно быть, надо обертке дать паддинги сверху/снизу
 		color: $mainOrange;
 		@media (any-hover: hover){
 			&:hover{

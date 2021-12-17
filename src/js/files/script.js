@@ -9,6 +9,13 @@
 // });
 
 document.addEventListener('click', documentActions);
+const menuBlocks = document.querySelectorAll('.submenu-catalog__block');
+/* if (menuBlocks.lenth){
+    menuBlocks.forEach(menuBlock =>{
+        const menuBloksItems = menuBlock.querySelectorAll('.submenu-catalog__category').length;
+        menuBlock.classList.add(`.submenu-catalog__block--${menuBloksItems}`);
+    })
+} */
 function documentActions(e) {
     const targetElement = e.target;
     if (targetElement.closest('[data-parent]')){
@@ -16,12 +23,20 @@ function documentActions(e) {
         const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
         const catalogMenu = document.querySelector('.catalog-header');
         if(subMenu){
-            catalogMenu.classList.toggle('_submenu-show')
+            const activeLink = document.querySelector('._submenu-active');
+            const activeBlock = document.querySelector('._submenu-open');
+            if(activeLink && activeLink !== targetElement){
+                activeLink.classList.remove('_submenu-active');
+                activeBlock.classList.remove('_submenu-open')
+            }
             targetElement.classList.toggle('_submenu-active');
             subMenu.classList.toggle('_submenu-open');
-        }else{
-            console.log('Поломка');
+
+        } else {
+            console.log('Нет такого подменю');
         }
         e.preventDefault();
     }
 }
+
+//catalogMenu.classList.toggle('_submenu-show')
