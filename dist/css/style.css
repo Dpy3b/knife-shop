@@ -187,7 +187,7 @@ h6 {
 */
 
 [class*=__container] {
-  max-width: 101.875rem;
+  max-width: 99.375rem;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   margin: 0 auto;
@@ -379,7 +379,7 @@ body.popup-show::after {
 }
 
 .body-header {
-  padding: 0.625rem;
+  padding: 10px 0;
   background-color: #ECF1F2;
 }
 
@@ -618,7 +618,6 @@ body.popup-show::after {
 .catalog-header {
   background-color: #141414;
   color: #fff;
-  padding: 0.625rem 0;
   position: relative;
 }
 
@@ -656,9 +655,9 @@ body.popup-show::after {
   visibility: hidden;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 0.4375rem;
   left: 0.625rem;
-  height: 1px;
+  height: 2px;
   width: calc(100% - 1.25rem);
   background-color: #E8AA31;
   -webkit-transition: all 0.3s ease 0s;
@@ -685,6 +684,7 @@ body.popup-show::after {
 }
 
 .submenu-catalog__block {
+  padding: 0 0.625rem;
   display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -731,7 +731,7 @@ body.popup-show::after {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  padding: 1.875rem 0.625rem;
+  padding: 0.625rem;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -754,7 +754,7 @@ body.popup-show::after {
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-size: 1rem;
-  padding: 1.875rem 0.625rem 0px;
+  padding: 1.875rem 0.625rem;
   color: #E8AA31;
 }
 
@@ -762,7 +762,7 @@ body.popup-show::after {
   display: none;
 }
 
-@media (min-width: 103.75em) {
+@media (min-width: 101.25em) {
   .menu__list {
     -webkit-column-gap: 3.75rem;
        -moz-column-gap: 3.75rem;
@@ -853,15 +853,15 @@ body.popup-show::after {
   }
 }
 
-@media (min-width: 20em) and (max-width: 103.75em) {
+@media (min-width: 20em) and (max-width: 101.25em) {
   .menu__list {
-    -webkit-column-gap: calc(1.25rem + 2.5 * (((100vw - 20rem)) / ((83.75))));
-       -moz-column-gap: calc(1.25rem + 2.5 * (((100vw - 20rem)) / ((83.75))));
-            column-gap: calc(1.25rem + 2.5 * (((100vw - 20rem)) / ((83.75))));
+    -webkit-column-gap: calc(1.25rem + 2.5 * (((100vw - 20rem)) / ((81.25))));
+       -moz-column-gap: calc(1.25rem + 2.5 * (((100vw - 20rem)) / ((81.25))));
+            column-gap: calc(1.25rem + 2.5 * (((100vw - 20rem)) / ((81.25))));
   }
 
   .body-header__search {
-    padding-left: calc(1.25rem + 8.625 * (((100vw - 20rem)) / ((83.75))));
+    padding-left: calc(1.25rem + 8.625 * (((100vw - 20rem)) / ((81.25))));
   }
 }
 

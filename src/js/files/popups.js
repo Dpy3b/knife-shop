@@ -1,4 +1,4 @@
-// Подключение дополнения
+/* // Подключение дополнения
 import "../libs/hystmodal.min.js";
 // Подключение стилей
 import "../../scss/libs/hystmodal.scss";
@@ -24,4 +24,4 @@ export function initPopups() {
 		popupItem.open(`#${getHash()}`);
 	}
 }
-initPopups();
+initPopups(); */
