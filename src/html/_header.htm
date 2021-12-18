@@ -1,31 +1,42 @@
 <header class="header">
 	<div class="header__top top-header">
 		<div class="top-header__container">
-			<div class="top-header__menu menu">
-				<nav class="menu__body">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a href="#!" class="menu__link">О нас</a>
-						</li>
-						<li class="menu__item">
-							<a href="#!" class="menu__link">Оплата и доставка</a>
-						</li>
-						<li class="menu__item">
-							<a href="#!" class="menu__link">Новости</a>
-						</li>
-						<li class="menu__item">
-							<a href="#!" class="menu__link">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+			<nav class="top-header__menu menu-top-header">
+				<ul data-da=".menu__body, 991.98" class="menu-top-header__list">
+					<li class="menu-top-header__item menu-top-header__item--catalog">
+						<a href="#!" class="menu-top-header__link menu-top-header__link--catalog">
+							<svg class="menu-top-header__link-icon">
+									<use xlink:href="../img/sprite.svg#arrow-down"></use>
+							</svg>
+							Каталог товаров
+						</a>
+					</li>
+					<li class="menu-top-header__item">
+						<a href="#!" class="menu-top-header__link">О нас</a>
+					</li>
+					<li class="menu-top-header__item">
+						<a href="#!" class="menu-top-header__link">Оплата и доставка</a>
+					</li>
+					<li class="menu-top-header__item">
+						<a href="#!" class="menu-top-header__link">Новости</a>
+					</li>
+					<li class="menu-top-header__item">
+						<a href="#!" class="menu-top-header__link">Контакты</a>
+					</li>
+				</ul>
+			</nav>
 			<a href="#!" class="top-header__cabinet">
 				<svg class="top-header__cabinet-icon">
 						<use xlink:href="../img/sprite.svg#profile"></use>
 				</svg>
-				Личный кабинет
+				<span>Личный кабинет</span>
 			</a>
-			<button type="button" class="menu__icon icon-menu"><span></span></button>
+			<nav hidden class="menu">
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<div class="menu__body">
+
+				</div>
+			</nav>
 		</div>
 	</div>
 	<div class="header__body body-header">
@@ -35,7 +46,7 @@
 						<use xlink:href="../img/sprite.svg#logo"></use>
 				</svg>
 			</a>
-			<div class="body-header__search">
+			<div data-da=".catalog-header__container, 479.98" class="body-header__search">
 				<form action="#" class="search-header">
 					<button type="button" class="search-header__button">
 						<svg class="search-header__button-icon">
@@ -52,10 +63,15 @@
 					</svg>
 					Москва
 				</a>
-				<div class="actions-header__phones phones-header">
+				<div data-da=".top-header__container, 991.98, first" class="actions-header__phones phones-header">
 					<div data-spollers class="phones-header__items">
 						<div class="phones-header__item">
-							<a href="tel:8-800-777-49-67" class="phones-header__phone">8-800-777-49-67</a>
+							<a href="tel:8-800-777-49-67" class="phones-header__phone">
+								<svg class="phones-header__phone-icon">
+										<use xlink:href="../img/sprite.svg#phone"></use>
+								</svg>
+							<span>8-800-777-49-67</span>
+							</a>
 							<button type="button" data-spoller class="phones-header__arrow-down">
 								<svg class="phones-header__arrow-down-icon">
 										<use xlink:href="../img/sprite.svg#arrow-down"></use>
@@ -76,12 +92,12 @@
 					</div>
 					<button type="button" data-popup="#callback" class="phones-header__callback">Заказать звонок</button>
 				</div>
-				<a href="#!" class="actions-header__favorite">
+				<a data-da=".top-header__container, 991.98, 2" href="#!" class="actions-header__favorite">
 					<svg class="actions-header__favorite-icon">
 							<use xlink:href="../img/sprite.svg#love"></use>
 					</svg>
 				</a>
-				<div class="actions-header__cart cart-header">
+				<a data-da=".top-header__container, 991.98, 2" href="#!" class="actions-header__cart cart-header">
 					<button class="cart-header__btn">
 						<svg class="cart-header__btn-icon">
 								<use xlink:href="../img/sprite.svg#cart"></use>
@@ -90,15 +106,21 @@
 					</button>
 					<div class="cart-header__body">
 						<div class="cart-header__summ">0р</div>
-						<a href="#!" class="cart-header__link">Оформить заказ</a>
+						<div class="cart-header__link">Оформить заказ</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div> <!--  -->
 	<div class="header__catalog catalog-header">
 		<div class="catalog-header__container">
 			<div class="catalog-header__menu menu-catalog">
+				<button type="button" class="menu-catalog__back">
+					<svg class="menu-catalog__back-icon">
+							<use xlink:href="../img/sprite.svg#arrow-back"></use>
+					</svg>
+					<span>Назад</span>
+				</button>
 				<ul class="menu-catalog__list">
 					<li class="menu-catalog__item">
 						<button type="button" data-parent="1" class="menu-catalog__link">Каталог ножей</button>
@@ -117,8 +139,14 @@
 					</li>
 				</ul>
 					<div class="menu-catalog__submenu submenu-catalog">
+						<button type="button" class="submenu-catalog__back">
+							<svg class="submenu-catalog__back-icon">
+									<use xlink:href="../img/sprite.svg#arrow-back"></use>
+							</svg>
+							<span>Назад</span>
+						</button>
 						<div class="submenu-catalog__container">
-								<div hidden data-submenu="1" class="submenu-catalog__block submenu-catalog__block--5">
+								<div hidden data-submenu="1" class="submenu-catalog__block">
 									<div class="submenu-catalog__category">
 										<a href="#!" class="submenu-catalog__link-category">Категория ножей</a>
 									</div>
@@ -277,7 +305,7 @@
 										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
 									</div>
 								</div>
-								<div hidden data-submenu="2" class="submenu-catalog__block submenu-catalog__block--3">
+								<div hidden data-submenu="2" class="submenu-catalog__block">
 									<div class="submenu-catalog__category">
 										<a href="#!" class="submenu-catalog__link-category">Ножи по маркам стали</a>
 									</div>
@@ -363,7 +391,7 @@
 											<a href="#!" class="submenu-catalog__all">Смотреть все</a>
 										</div>
 								</div>
-								<div hidden data-submenu="3" class="submenu-catalog__block submenu-catalog__block--4">
+								<div hidden data-submenu="3" class="submenu-catalog__block">
 										<div class="submenu-catalog__category">
 											<a href="#!" class="submenu-catalog__link-category">Производство ножей</a>
 										</div>
@@ -486,13 +514,13 @@
 										<div class="submenu-catalog__footer">
 											<a href="#!" class="submenu-catalog__all">Смотреть все</a>
 										</div>
-									</div>
 								</div>
+							</div>
 							</div>
 						</div>
 					</div>
 				</ul>
-			</div>
+	</div>
 		</div>
 	</div>
 

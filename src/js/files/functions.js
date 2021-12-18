@@ -164,7 +164,7 @@ export let bodyLock = (delay = 500) => {
 Если нужно включать\выключать работу спойлеров на разных размерах экранов
 пишем параметры ширины и типа брейкпоинта.
 
-Например: 
+Например:
 data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
 data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
 
@@ -286,9 +286,9 @@ export function spollers() {
 Для родителя заголовков табов пишем атрибут data-tabs-titles
 Для родителя блоков табов пишем атрибут data-tabs-body
 
-Если нужно чтобы табы открывались с анимацией 
+Если нужно чтобы табы открывались с анимацией
 добавляем к data-tabs data-tabs-animate
-По умолчанию, скорость анимации 500ms, 
+По умолчанию, скорость анимации 500ms,
 указать свою скорость можно так: data-tabs-animate="1000"
 
 Если нужно чтобы табы превращались в "спойлеры" на неком размере экранов пишем параметры ширины.
@@ -461,6 +461,11 @@ export function menuInit() {
 			if (bodyLockStatus) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
+				// дописываю в рамках верстки златмакс то что ниже
+				if(document.documentElement.classList.contains('catalog-open')){
+					document.documentElement.classList.remove('catalog-open')
+				}
+				// усе!
 			}
 		});
 	};

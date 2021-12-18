@@ -10,12 +10,12 @@
 
 document.addEventListener('click', documentActions);
 const menuBlocks = document.querySelectorAll('.submenu-catalog__block');
-/* if (menuBlocks.lenth){
-    menuBlocks.forEach(menuBlock =>{
+if (menuBlocks.length){
+    menuBlocks.forEach(menuBlock => {
         const menuBloksItems = menuBlock.querySelectorAll('.submenu-catalog__category').length;
-        menuBlock.classList.add(`.submenu-catalog__block--${menuBloksItems}`);
+        menuBlock.classList.add(`submenu-catalog__block--${menuBloksItems}`);
     })
-} */
+}
 function documentActions(e) {
     const targetElement = e.target;
     if (targetElement.closest('[data-parent]')){
@@ -25,16 +25,37 @@ function documentActions(e) {
         if(subMenu){
             const activeLink = document.querySelector('._submenu-active');
             const activeBlock = document.querySelector('._submenu-open');
+
             if(activeLink && activeLink !== targetElement){
                 activeLink.classList.remove('_submenu-active');
-                activeBlock.classList.remove('_submenu-open')
+                activeBlock.classList.remove('_submenu-open');
+                document.querySelector('.submenu-catalog').classList.remove('_submenu-open');
             }
+
+            document.querySelector('.submenu-catalog').classList.toggle('_submenu-open');
             targetElement.classList.toggle('_submenu-active');
             subMenu.classList.toggle('_submenu-open');
 
         } else {
             console.log('Нет такого подменю');
         }
+        e.preventDefault();
+    }
+    if (targetElement.closest('.menu-top-header__link--catalog')){
+        const catalogLink = targetElement.closest('.menu-top-header__link--catalog');
+        document.documentElement.classList.add('catalog-open');
+        e.preventDefault();
+    }
+    if (targetElement.closest('.menu-catalog__back')){
+        document.documentElement.classList.remove('catalog-open');
+        document.querySelector('._submenu-active') ? document.querySelector('._submenu-active').classList.remove('_submenu-active') : null;
+        document.querySelector('._submenu-open') ? document.querySelector('._submenu-open').classList.remove('_submenu-open') : null;
+        e.preventDefault();
+    }
+    if (targetElement.closest('.submenu-catalog__back')){
+        document.querySelector('._submenu-active') ? document.querySelector('._submenu-active').classList.remove('_submenu-active') : null;
+        document.querySelector('._submenu-open') ? document.querySelector('._submenu-open').classList.remove('_submenu-open') : null;
+        document.querySelector('.submenu-catalog').classList.remove('_submenu-open');
         e.preventDefault();
     }
 }
