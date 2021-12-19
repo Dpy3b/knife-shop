@@ -21,7 +21,6 @@ function documentActions(e) {
     if (targetElement.closest('[data-parent]')){
         const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
         const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
-        const catalogMenu = document.querySelector('.catalog-header');
         if(subMenu){
             const activeLink = document.querySelector('._submenu-active');
             const activeBlock = document.querySelector('._submenu-open');
@@ -29,10 +28,10 @@ function documentActions(e) {
             if(activeLink && activeLink !== targetElement){
                 activeLink.classList.remove('_submenu-active');
                 activeBlock.classList.remove('_submenu-open');
-                document.querySelector('.submenu-catalog').classList.remove('_submenu-open');
+                document.documentElement.classList.remove('submenu-open');
             }
 
-            document.querySelector('.submenu-catalog').classList.toggle('_submenu-open');
+            document.documentElement.classList.toggle('submenu-open');
             targetElement.classList.toggle('_submenu-active');
             subMenu.classList.toggle('_submenu-open');
 
@@ -42,7 +41,7 @@ function documentActions(e) {
         e.preventDefault();
     }
     if (targetElement.closest('.menu-top-header__link--catalog')){
-        const catalogLink = targetElement.closest('.menu-top-header__link--catalog');
+       // const catalogLink = targetElement.closest('.menu-top-header__link--catalog');
         document.documentElement.classList.add('catalog-open');
         e.preventDefault();
     }
@@ -53,9 +52,9 @@ function documentActions(e) {
         e.preventDefault();
     }
     if (targetElement.closest('.submenu-catalog__back')){
+        document.documentElement.classList.remove('submenu-open');
         document.querySelector('._submenu-active') ? document.querySelector('._submenu-active').classList.remove('_submenu-active') : null;
         document.querySelector('._submenu-open') ? document.querySelector('._submenu-open').classList.remove('_submenu-open') : null;
-        document.querySelector('.submenu-catalog').classList.remove('_submenu-open');
         e.preventDefault();
     }
 }

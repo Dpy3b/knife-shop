@@ -463,7 +463,10 @@ export function menuInit() {
 				document.documentElement.classList.toggle("menu-open");
 				// дописываю в рамках верстки златмакс то что ниже
 				if(document.documentElement.classList.contains('catalog-open')){
-					document.documentElement.classList.remove('catalog-open')
+					document.documentElement.classList.remove('catalog-open');
+				}
+				if(document.documentElement.classList.contains('submenu-open')){
+					document.documentElement.classList.remove('submenu-open');
 				}
 				// усе!
 			}

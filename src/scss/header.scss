@@ -126,7 +126,7 @@
 			left: -100%;
 			overflow: auto;
 			background-color: $mainDarkColor;
-			padding: rem(100) rem(50) rem(15);
+			padding: rem(80) rem(15) rem(50);
 			transition: left 0.5s ease 0s;
 			z-index: 4;
 			&::before {
@@ -455,6 +455,21 @@
 	}
 }
 .menu-catalog {
+	@media (max-width: $tablet){
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: $mainDarkColor;
+		padding: rem(25) rem(15) rem(50);
+		transition: left 0.5s ease 0s;
+		.catalog-open & {
+			left: 0;
+			z-index: 6;
+		}
+	}
 	&__back{
 		display: none;
 		@media (max-width: $tablet){
@@ -491,6 +506,9 @@
 		display: flex;
 		position: relative;
 		transition: color 0.3s ease 0s;
+		&[data-parent]{
+			
+		}
 		@media (min-width: $tablet){
 			min-height: rem(70);
 			padding: 0px rem(10);
@@ -538,21 +556,7 @@
 		left: 0;
 		background-color: $mainDarkColor;
 	}
-	@media (max-width: $tablet){
-		position: fixed;
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		background-color: $mainDarkColor;
-		padding: rem(100) rem(50) rem(15);
-		transition: left 0.3s ease 0s;
-		.catalog-open & {
-			left: 0;
-			z-index: 6;
-		}
-	}
+
 }
 .submenu-catalog {
 	@media (max-width: $tablet){
@@ -565,7 +569,7 @@
 		background-color: $mainDarkColor;
 		padding: rem(25) rem(15) rem(50);
 		transition: left 0.5s ease 0s;
-		._submenu-open & {
+		.submenu-open & {
 			left: 0;
 			z-index: 6;
 			display: block;
@@ -573,7 +577,7 @@
 	}
 	// .submenu-catalog__block
 	&__block {
-		padding: 0 rem(10);
+		//padding: 0 rem(10);
 		display: none;
 		@for $var from 1 to 6 {
 			&--#{$var}{
@@ -582,8 +586,12 @@
 		}
 		&._submenu-open{
 			display: grid;
+			@media (max-width: $tablet){
+				display: block;
+			}
+
 		}
-		@media (max-width: $tablet){
+		/* @media (max-width: $tablet){
 			position: fixed;
 			top: 0;
 			left: -100%;
@@ -591,14 +599,14 @@
 			height: 100%;
 			overflow: auto;
 			background-color: $mainDarkColor;
-			padding: rem(100) rem(50) rem(15);
+			padding: rem(25) rem(15) rem(50);
 			transition: left 0.5s ease 0s;
-			&._submenu-open {
+			._submenu-open & {
 				left: 0;
 				z-index: 6;
 				display: block;
 			}
-		}
+		} */
 	}
 	// .submenu-catalog__container
 	&__container{
@@ -608,11 +616,18 @@
 	&__category {
 		font-size: rem(16);
 		line-height: math.div(20, 16);
-		font-weight: 700;
-		padding: rem(30) rem(15) rem(30) 0;
 		@media (any-hover: hover){
 			&:hover{
 				text-decoration: underline;
+			}
+		}
+		@media (min-width: $tablet){
+			font-weight: 700;
+			padding: rem(30) rem(15) rem(30) 0;
+		}
+		@media (max-width: $tablet){
+			&:not(:last-child){
+				margin-bottom: em(25, 16);
 			}
 		}
 	}
@@ -622,7 +637,9 @@
 			display: inline-flex;
 			align-items: center;
 			@include adaptiveValue("font-size", 30, 20, 992, 320, 1);
-			z-index: 7;
+			&:not(:last-child){
+				margin-bottom: em(65, 30);
+			}
 		}
 	}
 	&__back-icon{
@@ -640,6 +657,9 @@
 		padding: rem(30) 0;
 		border-top: 1px solid rgba(255, 255, 255, 0.3);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		@media (max-width: $tablet){
+			display: none;
+		}
 	}
 	// .submenu-catalog__item
 	&__item {
@@ -661,9 +681,15 @@
 			}
 		}
 	}
+	&__link-category{
+		@include adaptiveValue("font-size", 25, 20, 992, 320);
+	}
 	// .submenu-catalog__footer
 	&__footer{
 		padding: rem(30) 0;
+		@media (max-width: $tablet){
+			display: none;
+		}
 	}
 	// .submenu-catalog__all
 	&__all {
