@@ -92,6 +92,8 @@
 								</svg>
 								<div class="advantages-main__text">Скидки постоянным покупателям</div>
 							</div>
+							<div class="advantages-main__text"></div>
+
 
 						</div>
 
@@ -230,12 +232,138 @@
 					</div>
 
 				</section>
-				@@include('html/_products-slider.htm',{
-					"title": "Хиты продаж"
-				})
+				<section class="page__hits-products hits-products">
+					@@include('html/_products-slider.htm',{
+						"title": "Хиты продаж",
+						"moretext": "Перейти в каталог"
+					})
+				</section>
+				<section class="page__new-products new-products">
+					@@include('html/_products-new.htm',{
+						"title": "Новинки",
+						"moretext": "Перейти в каталог"
+					})
+				</section>
+				<section class="page__sale-products sale-products sale-products_no-bottom">
+					@@include('html/_products-slider.htm',{
+						"title": "Акции",
+						"moretext": "Все акции"
+					})
+				</section>
+				<section class="page__sale-products sale-products">
+					@@include('html/_products-slider.htm',{
+						"title": "Акции",
+						"moretext": "Все акции"
+					})
+				</section>
+				<section class="page__new-products new-products new-products_no-top">
+					@@include('html/_products-new.htm',{
+						"title": "Новинки",
+						"moretext": "Перейти в каталог"
+					})
+				</section>
+				<section class="page__sale-products sale-products sale-products_no-bottom">
+					@@include('html/_products-slider.htm',{
+						"title": "Акции",
+						"moretext": "Все акции"
+					})
+				</section>
+				<section class="page__sale-products sale-products">
+					@@include('html/_products-slider.htm',{
+						"title": "Акции",
+						"moretext": "Все акции"
+					})
+				</section>
+				<section class="page__articles-module articles-module">
+					<div class="articles-module__container">
+						<h2 class="articles-module__title">Наши статьи</h2>
+						<div class="articles-module__items">
+							<div class="articles-module__item item-article">
+								<a href="#!" class="item-article__image-ibg">
+									<img src="../img/mainpage/articles-module/01.png" alt="Картинка">
+								</a>
+								<div class="item-article__body">
+									<h4 class="item-article__title">
+										<a href="#!" class="item-article__link-title">Все о ножах: как правильно выбрать</a>
+									</h4>
+									<div class="item-article__date">24.07.2019</div>
+								</div>
+							</div>
+							<div class="articles-module__item item-article">
+								<a href="#!" class="item-article__image-ibg">
+									<img src="../img/mainpage/articles-module/02.png" alt="Картинка">
+								</a>
+								<div class="item-article__body">
+									<h4 class="item-article__title">
+										<a href="#!" class="item-article__link-title">Как правильно выбрать фонарь</a>
+									</h4>
+									<div class="item-article__date">13.05.2021</div>
+								</div>
+							</div>
+							<div class="articles-module__item item-article">
+								<a href="#!" class="item-article__image-ibg">
+									<img src="../img/mainpage/articles-module/03.png" alt="Картинка">
+								</a>
+								<div class="item-article__body">
+									<h4 class="item-article__title">
+										<a href="#!" class="item-article__link-title">Кухонные ножи для хозяек</a>
+									</h4>
+									<div class="item-article__date">14.11.2021</div>
+								</div>
+							</div>
+							<div class="articles-module__item item-article">
+								<a href="#!" class="item-article__image-ibg">
+									<img src="../img/mainpage/articles-module/04.png" alt="Картинка">
+								</a>
+								<div class="item-article__body">
+									<h4 class="item-article__title">
+										<a href="#!" class="item-article__link-title">Профессиональные ножи для кулинарии</a>
+									</h4>
+									<div class="item-article__date">05.02.2021</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-
-
+				</section>
+				<section class="page__products-block products-block">
+					<div class="products-block__container">
+						<div class="products-block__item product-block">
+							<div class="product-block__body">
+								<h4 class="product-block__title">
+									<a href="#!" class="product-block__link-title">Тактические фонари</a>
+								</h4>
+								<div class="product-block__text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</div>
+								<a href="#!" class="product-block__button button">Подробнее</a>
+							</div>
+							<div class="product-block__image">
+								<img src="../img/mainpage/products-block/01.png" alt="Картинка">
+							</div>
+						</div>
+						<div class="products-block__item product-block">
+							<div class="product-block__body">
+								<h4 class="product-block__title">
+									<a href="#!" class="product-block__link-title">Палобные мультифонари</a>
+								</h4>
+								<div class="product-block__text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</div>
+								<a href="#!" class="product-block__button button">Подробнее</a>
+							</div>
+							<div class="product-block__image">
+								<img src="../img/mainpage/products-block/02.png" alt="Картинка">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__hits-products hits-products">
+					@@include('html/_products-slider.htm',{
+						"title": "Фонари",
+						"moretext": "Перейти в каталог"
+					})
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

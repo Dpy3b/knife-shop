@@ -1,9 +1,9 @@
-<section class="page__products-slider products-slider">
+<section class="products-slider">
   <div class="products-slider__container">
     <div class="products-slider__header">
       <h2 class="products-slider__title">@@title</h2>
       <a href="#!" class="products-slider__more">
-        <span>Перейти в каталог</span>
+        <span>@@moretext</span>
         <svg class="products-slider__more-icon">
             <use xlink:href="../img/sprite.svg#arrow-next"></use>
         </svg>
@@ -13,8 +13,10 @@
       <div class="products-slider__swiper">
         <div class="products-slider__slide">
           <article class="products-card">
-            <a href="#!" class="products-card__image-ibg_contain">
-              <img src="../img/mainpage/product-cart/image.png" alt="">
+            <a href="#!" class="products-card__image">
+              <span class="products-card__item-image-ibg products-card__item-image-ibg_contain"> <!-- по идее тут лучше див, уже можно по семантике -->
+                <img src="../img/mainpage/product-cart/02.png" alt="">
+              </span>
             </a>
             <div class="products-card__body">
               <h4 class="products-card__title">
@@ -51,7 +53,325 @@
                   </svg>
                 </a>
               </div>
-              <button type="button" class="products-card__cart">
+              <button type="button" class="products-card__cart button">
+                <span>В корзину</span>
+                <svg class="products-card__cart-icon">
+                    <use xlink:href="../img/sprite.svg#cart-mini"></use>
+                </svg>
+              </button>
+
+            </div>
+          </article>
+
+        </div>
+        <div class="products-slider__slide">
+          <article class="products-card">
+            <a href="#!" class="products-card__image">
+              <span class="products-card__item-image-ibg products-card__item-image-ibg_contain"> <!-- по идее тут лучше див, уже можно по семантике -->
+                <img src="../img/mainpage/product-cart/image.png" alt="">
+              </span>
+            </a>
+            <div class="products-card__body">
+              <h4 class="products-card__title">
+                <a href="#!" class="products-card__link-title">Нож Лиса</a>
+              </h4>
+              <div class="products-card__info info-product-cart">
+                <div class="info-product-cart__size">95x18</div>
+                <div class="info-product-cart__materials">Орех, Алюминий</div>
+              </div>
+              <div class="products-card__rating rating rating_set">
+                <div class="rating__body">
+                  <div class="rating__active"></div>
+                  <div class="rating__items">
+                    <input type="radio" class="rating__item" value="1" name="rating"></input>
+                    <input type="radio" class="rating__item" value="2" name="rating"></input>
+                    <input type="radio" class="rating__item" value="3" name="rating"></input>
+                    <input type="radio" class="rating__item" value="4" name="rating"></input>
+                    <input type="radio" class="rating__item" value="5" name="rating"></input>
+                  </div>
+                </div>
+                <div class="rating__value">3.6</div>
+                <div class="rating__info">12 отзывов</div>
+              </div>
+              <div class="products-card__footer">
+                <div class="products-card__price">2 719р.</div>
+                <a href="#!" class="products-card__compare">
+                  <svg class="products-card__compare-icon">
+                      <use xlink:href="../img/sprite.svg#compare"></use>
+                  </svg>
+                </a>
+                <a href="#!" class="products-card__love">
+                  <svg class="products-card__love-icon">
+                      <use xlink:href="../img/sprite.svg#love"></use>
+                  </svg>
+                </a>
+              </div>
+              <button type="button" class="products-card__cart button">
+                <span>В корзину</span>
+                <svg class="products-card__cart-icon">
+                    <use xlink:href="../img/sprite.svg#cart-mini"></use>
+                </svg>
+              </button>
+
+            </div>
+          </article>
+
+        </div>
+        <div class="products-slider__slide">
+          <article class="products-card">
+            <a href="#!" class="products-card__image">
+              <span class="products-card__item-image-ibg products-card__item-image-ibg_contain"> <!-- по идее тут лучше див, уже можно по семантике -->
+                <img src="../img/mainpage/product-cart/02.png" alt="">
+              </span>
+            </a>
+            <div class="products-card__body">
+              <h4 class="products-card__title">
+                <a href="#!" class="products-card__link-title">Нож Лиса</a>
+              </h4>
+              <div class="products-card__info info-product-cart">
+                <div class="info-product-cart__size">95x18</div>
+                <div class="info-product-cart__materials">Орех, Алюминий</div>
+              </div>
+              <div class="products-card__rating rating rating_set">
+                <div class="rating__body">
+                  <div class="rating__active"></div>
+                  <div class="rating__items">
+                    <input type="radio" class="rating__item" value="1" name="rating"></input>
+                    <input type="radio" class="rating__item" value="2" name="rating"></input>
+                    <input type="radio" class="rating__item" value="3" name="rating"></input>
+                    <input type="radio" class="rating__item" value="4" name="rating"></input>
+                    <input type="radio" class="rating__item" value="5" name="rating"></input>
+                  </div>
+                </div>
+                <div class="rating__value">3.6</div>
+                <div class="rating__info">12 отзывов</div>
+              </div>
+              <div class="products-card__footer">
+                <div class="products-card__price">2 719р.</div>
+                <a href="#!" class="products-card__compare">
+                  <svg class="products-card__compare-icon">
+                      <use xlink:href="../img/sprite.svg#compare"></use>
+                  </svg>
+                </a>
+                <a href="#!" class="products-card__love">
+                  <svg class="products-card__love-icon">
+                      <use xlink:href="../img/sprite.svg#love"></use>
+                  </svg>
+                </a>
+              </div>
+              <button type="button" class="products-card__cart button">
+                <span>В корзину</span>
+                <svg class="products-card__cart-icon">
+                    <use xlink:href="../img/sprite.svg#cart-mini"></use>
+                </svg>
+              </button>
+
+            </div>
+          </article>
+
+        </div>
+        <div class="products-slider__slide">
+          <article class="products-card">
+            <a href="#!" class="products-card__image">
+              <span class="products-card__item-image-ibg products-card__item-image-ibg_contain"> <!-- по идее тут лучше див, уже можно по семантике -->
+                <img src="../img/mainpage/product-cart/image.png" alt="">
+              </span>
+            </a>
+            <div class="products-card__body">
+              <h4 class="products-card__title">
+                <a href="#!" class="products-card__link-title">Нож Лиса</a>
+              </h4>
+              <div class="products-card__info info-product-cart">
+                <div class="info-product-cart__size">95x18</div>
+                <div class="info-product-cart__materials">Орех, Алюминий</div>
+              </div>
+              <div class="products-card__rating rating rating_set">
+                <div class="rating__body">
+                  <div class="rating__active"></div>
+                  <div class="rating__items">
+                    <input type="radio" class="rating__item" value="1" name="rating"></input>
+                    <input type="radio" class="rating__item" value="2" name="rating"></input>
+                    <input type="radio" class="rating__item" value="3" name="rating"></input>
+                    <input type="radio" class="rating__item" value="4" name="rating"></input>
+                    <input type="radio" class="rating__item" value="5" name="rating"></input>
+                  </div>
+                </div>
+                <div class="rating__value">3.6</div>
+                <div class="rating__info">12 отзывов</div>
+              </div>
+              <div class="products-card__footer">
+                <div class="products-card__price">2 719р.</div>
+                <a href="#!" class="products-card__compare">
+                  <svg class="products-card__compare-icon">
+                      <use xlink:href="../img/sprite.svg#compare"></use>
+                  </svg>
+                </a>
+                <a href="#!" class="products-card__love">
+                  <svg class="products-card__love-icon">
+                      <use xlink:href="../img/sprite.svg#love"></use>
+                  </svg>
+                </a>
+              </div>
+              <button type="button" class="products-card__cart button">
+                <span>В корзину</span>
+                <svg class="products-card__cart-icon">
+                    <use xlink:href="../img/sprite.svg#cart-mini"></use>
+                </svg>
+              </button>
+
+            </div>
+          </article>
+
+        </div>
+        <div class="products-slider__slide">
+          <article class="products-card">
+            <a href="#!" class="products-card__image">
+              <span class="products-card__item-image-ibg products-card__item-image-ibg_contain"> <!-- по идее тут лучше див, уже можно по семантике -->
+                <img src="../img/mainpage/product-cart/02.png" alt="">
+              </span>
+            </a>
+            <div class="products-card__body">
+              <h4 class="products-card__title">
+                <a href="#!" class="products-card__link-title">Нож Лиса</a>
+              </h4>
+              <div class="products-card__info info-product-cart">
+                <div class="info-product-cart__size">95x18</div>
+                <div class="info-product-cart__materials">Орех, Алюминий</div>
+              </div>
+              <div class="products-card__rating rating rating_set">
+                <div class="rating__body">
+                  <div class="rating__active"></div>
+                  <div class="rating__items">
+                    <input type="radio" class="rating__item" value="1" name="rating"></input>
+                    <input type="radio" class="rating__item" value="2" name="rating"></input>
+                    <input type="radio" class="rating__item" value="3" name="rating"></input>
+                    <input type="radio" class="rating__item" value="4" name="rating"></input>
+                    <input type="radio" class="rating__item" value="5" name="rating"></input>
+                  </div>
+                </div>
+                <div class="rating__value">3.6</div>
+                <div class="rating__info">12 отзывов</div>
+              </div>
+              <div class="products-card__footer">
+                <div class="products-card__price">2 719р.</div>
+                <a href="#!" class="products-card__compare">
+                  <svg class="products-card__compare-icon">
+                      <use xlink:href="../img/sprite.svg#compare"></use>
+                  </svg>
+                </a>
+                <a href="#!" class="products-card__love">
+                  <svg class="products-card__love-icon">
+                      <use xlink:href="../img/sprite.svg#love"></use>
+                  </svg>
+                </a>
+              </div>
+              <button type="button" class="products-card__cart button">
+                <span>В корзину</span>
+                <svg class="products-card__cart-icon">
+                    <use xlink:href="../img/sprite.svg#cart-mini"></use>
+                </svg>
+              </button>
+
+            </div>
+          </article>
+
+        </div>
+        <div class="products-slider__slide">
+          <article class="products-card">
+            <a href="#!" class="products-card__image">
+              <span class="products-card__item-image-ibg products-card__item-image-ibg_contain"> <!-- по идее тут лучше див, уже можно по семантике -->
+                <img src="../img/mainpage/product-cart/image.png" alt="">
+              </span>
+            </a>
+            <div class="products-card__body">
+              <h4 class="products-card__title">
+                <a href="#!" class="products-card__link-title">Нож Лиса</a>
+              </h4>
+              <div class="products-card__info info-product-cart">
+                <div class="info-product-cart__size">95x18</div>
+                <div class="info-product-cart__materials">Орех, Алюминий</div>
+              </div>
+              <div class="products-card__rating rating rating_set">
+                <div class="rating__body">
+                  <div class="rating__active"></div>
+                  <div class="rating__items">
+                    <input type="radio" class="rating__item" value="1" name="rating"></input>
+                    <input type="radio" class="rating__item" value="2" name="rating"></input>
+                    <input type="radio" class="rating__item" value="3" name="rating"></input>
+                    <input type="radio" class="rating__item" value="4" name="rating"></input>
+                    <input type="radio" class="rating__item" value="5" name="rating"></input>
+                  </div>
+                </div>
+                <div class="rating__value">3.6</div>
+                <div class="rating__info">12 отзывов</div>
+              </div>
+              <div class="products-card__footer">
+                <div class="products-card__price">2 719р.</div>
+                <a href="#!" class="products-card__compare">
+                  <svg class="products-card__compare-icon">
+                      <use xlink:href="../img/sprite.svg#compare"></use>
+                  </svg>
+                </a>
+                <a href="#!" class="products-card__love">
+                  <svg class="products-card__love-icon">
+                      <use xlink:href="../img/sprite.svg#love"></use>
+                  </svg>
+                </a>
+              </div>
+              <button type="button" class="products-card__cart button">
+                <span>В корзину</span>
+                <svg class="products-card__cart-icon">
+                    <use xlink:href="../img/sprite.svg#cart-mini"></use>
+                </svg>
+              </button>
+
+            </div>
+          </article>
+
+        </div>
+        <div class="products-slider__slide">
+          <article class="products-card">
+            <a href="#!" class="products-card__image">
+              <span class="products-card__item-image-ibg products-card__item-image-ibg_contain"> <!-- по идее тут лучше див, уже можно по семантике -->
+                <img src="../img/mainpage/product-cart/02.png" alt="">
+              </span>
+            </a>
+            <div class="products-card__body">
+              <h4 class="products-card__title">
+                <a href="#!" class="products-card__link-title">Нож Лиса</a>
+              </h4>
+              <div class="products-card__info info-product-cart">
+                <div class="info-product-cart__size">95x18</div>
+                <div class="info-product-cart__materials">Орех, Алюминий</div>
+              </div>
+              <div class="products-card__rating rating rating_set">
+                <div class="rating__body">
+                  <div class="rating__active"></div>
+                  <div class="rating__items">
+                    <input type="radio" class="rating__item" value="1" name="rating"></input>
+                    <input type="radio" class="rating__item" value="2" name="rating"></input>
+                    <input type="radio" class="rating__item" value="3" name="rating"></input>
+                    <input type="radio" class="rating__item" value="4" name="rating"></input>
+                    <input type="radio" class="rating__item" value="5" name="rating"></input>
+                  </div>
+                </div>
+                <div class="rating__value">3.6</div>
+                <div class="rating__info">12 отзывов</div>
+              </div>
+              <div class="products-card__footer">
+                <div class="products-card__price">2 719р.</div>
+                <a href="#!" class="products-card__compare">
+                  <svg class="products-card__compare-icon">
+                      <use xlink:href="../img/sprite.svg#compare"></use>
+                  </svg>
+                </a>
+                <a href="#!" class="products-card__love">
+                  <svg class="products-card__love-icon">
+                      <use xlink:href="../img/sprite.svg#love"></use>
+                  </svg>
+                </a>
+              </div>
+              <button type="button" class="products-card__cart button">
                 <span>В корзину</span>
                 <svg class="products-card__cart-icon">
                     <use xlink:href="../img/sprite.svg#cart-mini"></use>
@@ -63,6 +383,8 @@
 
         </div>
       </div>
+      <div class="products-slider__dotts dotts"></div>
+
     </div>
   </div>
 </section>

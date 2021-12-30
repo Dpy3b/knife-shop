@@ -4,7 +4,6 @@
 .button {
 	//display: inline-flex;
 	display: inline-block;
-	padding: 0px 0px;
 	background: $mainOrange;
 	box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43);
 	border-radius: 3px;
@@ -13,10 +12,17 @@
 	padding: rem(8) rem(52);
 	color: $white;
 	line-height: math.div(32, 20);
-	transition: all 0.3s ease 0s;
+	transition: box-shadow 0.3s ease 0s;
 	@media (any-hover: hover) {
 		&:hover {
 			box-shadow: rgba(232, 170, 49, 0.63);
 		}
 	}
+	&--border{
+		background-color: $white;
+		border: 1px solid $mainOrange;
+		color: $mainOrange;
+		box-shadow: none;
+	}
 }
+

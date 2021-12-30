@@ -150,6 +150,8 @@ body {
 @import "base";
 @import "base/forms/button";
 @import "base/forms/rating";
+@import "base/forms/select";
+@import "../../libs/nouislider";
 // Стили глобальных элементов проекта
 @import "ui";
 
@@ -160,11 +162,20 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "catalog";
 
 //==================================================================================================================================================================================
 .page {
     // .page--home
     &--home {
+    }
+	// .page--home
+    &--inner {
+		padding-top: rem(30);
+    }
+	// .page__header
+    &__header {
+		margin-bottom: rem(22);
     }
     // .page__main-block
     &__main-block {
@@ -175,4 +186,11 @@ body {
 	// .page__products-slider
     &__products-slider {
     }
+	// .page__articles-module
+    &__articles-module {
+    }
+	// .page__products-block
+    &__products-block {
+    }
+
 }
