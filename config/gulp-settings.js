@@ -14,18 +14,19 @@ export const path = {
 		css: `${buildFolder}/css/`,
 		images: `${buildFolder}/img/`,
 		fonts: `${buildFolder}/fonts/`,
-		files: `${buildFolder}/files/`
+		files: `${buildFolder}/files/`,
+		svgUniformSpriteProd: `${buildFolder}/img/`
 	},
 	src: {
 		html: `${srcFolder}/*.html`,
 		pug: `${srcFolder}/pug/*.pug`,
 		js: `${srcFolder}/js/app.js`,
 		scss: [`${srcFolder}/scss/style.scss`, `${srcFolder}/scss/fonts.scss`],
-		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-		svg: `${srcFolder}/img/**/*.svg`,
+		images: [`${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`, "!**/favicon.*", "!**/svg-sprites/**.*", "!**/sprite.svg"],
+		svgsprites: [`${srcFolder}/img/svg-sprites/**.svg`, "!**/favicon.*"],
 		fonts: `${srcFolder}/fonts/*.*`,
 		files: `${srcFolder}/files/**/*.*`,
-		svgicons: `${srcFolder}/svgicons/*.svg`,
+		svgUniformSpriteDev: `${srcFolder}/img/`
 	},
 	clean: buildFolder,
 	buildFolder: buildFolder,
