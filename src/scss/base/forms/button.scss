@@ -27,5 +27,9 @@
 	&._fw {
 		width: 100%;
 	}
+	&--black{
+		background: $mainColor;
+		padding: rem(8) rem(30);
+	}
 }
 

@@ -68,7 +68,7 @@
     }
     // .filter-catalog__items
     &__items {
-        @media (min-width: $tablet){
+        @media (max-width: $tablet){
             display: none;
         }
         &._active{

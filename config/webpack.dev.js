@@ -56,7 +56,7 @@ const config = {
 		hot: true,
 		watchFiles: [
 			`${paths.src}/**/*.html`,
-			`${paths.src}/**/*.pug`,
+			//`${paths.src}/**/*.pug`, //нахуй закомментировал пока-что
 			`${paths.src}/**/*.htm`,
 			`${paths.src}/img/**/*.*`
 		],

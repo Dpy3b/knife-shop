@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+window['FLS'] = false;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -46,7 +46,7 @@ flsFunctions.spollers();
 Документация:
 Сниппет (HTML): tabs
 */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
@@ -60,7 +60,7 @@ flsFunctions.spollers();
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-import './libs/popup.js'
+//import './libs/popup.js'
 
 /*
 Модуль параллакса мышью
@@ -81,7 +81,7 @@ flsForms.formFieldsInit();
 flsForms.formSubmit(true);
 
 /* Модуль формы "колличество" */
-// flsForms.formQuantity();
+flsForms.formQuantity();
 
 /* Модуль формы "показать пароль" */
 // flsForms.formViewpass();

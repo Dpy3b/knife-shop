@@ -55,9 +55,10 @@ function documentActions(e) {
     }
 }
 
-
-/* document.querySelector('.filter-catalog__title').addEventListener('click', function(e){
-    if(innerWidth < 992){
-        document.querySelector('.filter-catalog__items').classList.toggle('_active');
-    }
-}); */
+if (document.querySelector('.filter-catalog__title')) {
+    document.querySelector('.filter-catalog__title').addEventListener('click', function(e){
+        if(innerWidth < 992){
+            document.querySelector('.filter-catalog__items').classList.toggle('_active');
+        }
+    });
+}
