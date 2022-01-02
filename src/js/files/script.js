@@ -1,12 +1,8 @@
-// Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
-// import { isMobile } from "./functions.js";
-// import { formsModules } from "./forms/forms.js";
+// Подключение функционала "Чертогов Фрилансера"
+import { isMobile } from "./functions.js";
+// Подключение списка активных модулей
+import { flsModules } from "./modules.js";
 
-// window.addEventListener("load", function (e) {
-// 	// Событие window load срабатывает после полной загрузки страницы, то есть когда загружены все изображения, все стили, все шрифты
-// 	// вот тогда мы хотим интегрировать этот фон
-// 	document.body.insertAdjacentHTML('beforeend', `<div class="main-bg"></div>`);
-// });
 
 document.addEventListener('click', documentActions);
 const menuBlocks = document.querySelectorAll('.submenu-catalog__block');
@@ -59,4 +55,9 @@ function documentActions(e) {
     }
 }
 
-//catalogMenu.classList.toggle('_submenu-show')
+
+/* document.querySelector('.filter-catalog__title').addEventListener('click', function(e){
+    if(innerWidth < 992){
+        document.querySelector('.filter-catalog__items').classList.toggle('_active');
+    }
+}); */

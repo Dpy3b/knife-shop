@@ -6,8 +6,6 @@
 *,
 *:before,
 *:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 :focus,
@@ -24,6 +22,7 @@ body {
 	min-width: $minWidth + px;
 }
 body {
+	color: $mainColor;
 	line-height: 1;
 	font-family: $fontFamily;
 	font-size: $fontSize;
@@ -32,6 +31,7 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 input,
 button,
@@ -45,7 +45,6 @@ button {
 	background-color: inherit;
 }
 a {
-	transition: color 0.3s ease 0s;
 	color: inherit;
 }
 a:link,

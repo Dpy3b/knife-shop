@@ -1,20 +1,10 @@
 // Подключение функционала "Чертогов Фрилансера"
+// Подключение списка активных модулей
+import { flsModules } from "../modules.js";
 // Вспомогательные функции
-import { isMobile, _slideUp, initPopups, _slideDown, _slideToggle } from "../functions.js";
+import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../functions.js";
 // Модуль прокрутки к блоку
 import { gotoBlock } from "../scroll/gotoblock.js";
-// Класс select
-import { SelectConstructor } from "../../libs/select.js";
-// Класс масок
-import { InputMask } from "../../libs/inputmask.js";
-// Функционал попапа
-// const popupItem = initPopups();
-//==============================================================================================================================================================================================================================================================================================================================
-// Объект модулей форм для экспорта
-export const formsModules = {
-	inputMaskModule: null,
-	selectModule: null
-}
 //================================================================================================================================================================================================================================================================================================================================
 
 /*
@@ -26,6 +16,11 @@ data-required="email" - вадидация E-mail
 к атрибуту data-required добавляем атрибут data-validate
 
 Чтобы вывести текст ошибки, нужно указать его в атрибуте data-error
+
+data-popup-message - указываем селектор попапа который нужно показать после отправки формы (режимы data-ajax или data-dev) ! необходимо подключить функционал попапов в app.js
+data-ajax - отправляем данные формы AJAX запросом по адресу указанному в action методом указанным в method
+data-dev - режим разработчика - эмитируем отправку формы
+data-goto-error - прокрутить страницу к ошибке
 */
 
 // Работа с полями формы. Добавление классов, работа с placeholder
@@ -126,7 +121,6 @@ export let formValidate = {
 				el.parentElement.classList.remove('_form-focus');
 				el.classList.remove('_form-focus');
 				formValidate.removeError(el);
-				el.value = el.dataset.placeholder;
 			}
 			let checkboxes = form.querySelectorAll('.checkbox__input');
 			if (checkboxes.length > 0) {
@@ -135,12 +129,12 @@ export let formValidate = {
 					checkbox.checked = false;
 				}
 			}
-			if (formsModules.selectModule) {
+			if (flsModules.select) {
 				let selects = form.querySelectorAll('.select');
 				if (selects.length) {
 					for (let index = 0; index < selects.length; index++) {
 						const select = selects[index].querySelector('select');
-						formsModules.selectModule.selectBuild(select);
+						flsModules.select.selectBuild(select);
 					}
 				}
 			}
@@ -152,6 +146,9 @@ export let formValidate = {
 }
 /* Отправка форм */
 export function formSubmit(validate) {
+	if (flsModules.popup) {
+		flsModules.popup.open('some');
+	}
 	const forms = document.forms;
 	if (forms.length) {
 		for (const form of forms) {
@@ -168,10 +165,8 @@ export function formSubmit(validate) {
 	async function formSubmitAction(form, e) {
 		const error = validate ? formValidate.getErrors(form) : 0;
 		if (error === 0) {
-			const popup = form.dataset.popup;
 			const ajax = form.hasAttribute('data-ajax');
-			//SendForm
-			if (ajax) {
+			if (ajax) { // Если режим ajax
 				e.preventDefault();
 				const formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
 				const formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
@@ -185,24 +180,14 @@ export function formSubmit(validate) {
 				if (response.ok) {
 					let responseResult = await response.json();
 					form.classList.remove('_sending');
-					if (popup) {
-						// Нужно подключить зависимость
-						popupItem.open(`#${popup}`);
-					}
-					formValidate.formClean(form);
+					formSent(form);
 				} else {
 					alert("Ошибка");
 					form.classList.remove('_sending');
 				}
-			}
-			// Если режим разработки
-			if (form.hasAttribute('data-dev')) {
+			} else if (form.hasAttribute('data-dev')) {	// Если режим разработки
 				e.preventDefault();
-				if (popup) {
-					// Нужно подключить зависимость
-					popupItem.open(`#${popup}`);
-				}
-				formValidate.formClean(form);
+				formSent(form);
 			}
 		} else {
 			e.preventDefault();
@@ -210,21 +195,32 @@ export function formSubmit(validate) {
 			if (formError && form.hasAttribute('data-goto-error')) {
 				gotoBlock(formError, true, 1000);
 			}
-
 		}
 	}
-}
-/* Маски для полей (в работе) */
-export function formMasks(logging) {
-	formsModules.inputMaskModule = new InputMask({
-		logging: logging
-	});
-}
-/* Модуль работы с select */
-export function formSelect(logging) {
-	formsModules.selectModule = new SelectConstructor({
-		logging: logging
-	});
+	// Действия после отправки формы
+	function formSent(form) {
+		// Создаем событие отправки формы
+		document.dispatchEvent(new CustomEvent("formSent", {
+			detail: {
+				form: form
+			}
+		}));
+		// Показываем попап, если подключен модуль попапов 
+		// и для формы указана настройка
+		setTimeout(() => {
+			if (flsModules.popup) {
+				const popup = form.dataset.popupMessage;
+				popup ? flsModules.popup.open(popup) : null;
+			}
+		}, 0);
+		// Очищаем форму
+		formValidate.formClean(form);
+		// Сообщаем в консоль
+		formLogging(`Форма отправлена!`);
+	}
+	function formLogging(message) {
+		FLS(`[Формы]: ${message}`);
+	}
 }
 /* Модуь формы "показать пароль" */
 export function formViewpass() {

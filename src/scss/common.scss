@@ -1,3 +1,4 @@
+// Заголовки, общие БЄМ блоки и проче...
 .products-slider {
     // .products-slider__container
     &__container {
@@ -412,7 +413,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: rem(30);
+    @include adaptiveValue("gap", 30, 15);
     // .pagging__arrow
     &__arrow {
         height: rem(20);

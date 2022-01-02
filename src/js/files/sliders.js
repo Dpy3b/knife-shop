@@ -45,6 +45,7 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров
+	// Перечень слайдеров
 	if (document.querySelector('.main-block__slider')) {
 		new Swiper('.main-block__slider', {
 			// Подключаем модули слайдера
