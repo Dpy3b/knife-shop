@@ -35,40 +35,40 @@
             <div class="product__main main-product">
               <div class="main-product__images images-product">
                 <div class="images-product__slider">
-                  <div class="images-product__swiper">
-                    <div class="images-product__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                  <div data-gallery class="images-product__swiper">
+                    <div data-src="./img/product/01.webp" class="images-product__slide-ibg">
+                        <img src="../img/product/01.webp" alt="">
                     </div>
-                    <div class="images-product__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                    <div data-src="./img/product/02.webp" class="images-product__slide-ibg">
+                      <img src="../img/product/02.webp" alt="">
                     </div>
-                    <div class="images-product__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                    <div data-src="./img/product/03.webp" class="images-product__slide-ibg">
+                      <img src="../img/product/03.webp" alt="">
                     </div>
-                    <div class="images-product__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                    <div data-src="./img/product/04.webp" class="images-product__slide-ibg">
+                      <img src="../img/product/04.webp" alt="">
                     </div>
-                    <div class="images-product__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                    <div data-src="./img/product/05.webp" class="images-product__slide-ibg">
+                      <img src="../img/product/05.webp" alt="">
                     </div>
                   </div>
                 </div>
                 <div class="images-product__thumbs thumbs-images">
                   <div class="thumbs-images__swiper">
                     <div class="thumbs-images__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                      <img src="../img/product/01.webp" alt="">
                     </div>
                     <div class="thumbs-images__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                      <img src="../img/product/02.webp" alt="">
                     </div>
                     <div class="thumbs-images__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                      <img src="../img/product/03.webp" alt="">
                     </div>
                     <div class="thumbs-images__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                      <img src="../img/product/04.webp" alt="">
                     </div>
                     <div class="thumbs-images__slide-ibg">
-                      <img src="../img/product/01.png" alt="">
+                      <img src="../img/product/05.webp" alt="">
                     </div>
                   </div>
                 </div>
@@ -120,10 +120,13 @@
                   <div class="options-product__label">Сталь</div>
                   <div class="options-product__value">
                     <select name="form[]" class="form">
-                        <option value="1" selected>Пункт 1</option>
-                        <option value="2">Пункт 2</option>
-                        <option value="3">Пункт 3</option>
-                        <option value="4">Пункт 4</option>
+                        <option value="1" selected>Выбрать сталь</option>
+                        <option value="2">100Х13М</option>
+                        <option value="3">110Х18М-ШД</option>
+                        <option value="4">95Х18</option>
+                        <option value="5">AUS-8</option>
+                        <option value="6">ELMAX</option>
+                        <option value="7">RWL-34</option>
                     </select>
                   </div>
                 </div>
@@ -131,10 +134,11 @@
                   <div class="options-product__label">Рукоять</div>
                   <div class="options-product__value">
                     <select name="form[]" class="form">
-                        <option value="1" selected>Пункт 1</option>
-                        <option value="2">Пункт 2</option>
-                        <option value="3">Пункт 3</option>
-                        <option value="4">Пункт 4</option>
+                        <option value="1" selected>Выбрать рукоять</option>
+                        <option value="2">Орех</option>
+                        <option value="3">Сосна</option>
+                        <option value="4">Береза</option>
+                        <option value="5">Пластик</option>
                     </select>
                   </div>
                 </div>
@@ -142,7 +146,7 @@
                   <div class="options-product__label">Гарда и тыльник</div>
                   <div class="options-product__value">
                     <select name="form[]" class="form">
-                        <option value="1" selected>Пункт 1</option>
+                        <option value="1" selected>Выбрать гарду и тыльник</option>
                         <option value="2">Пункт 2</option>
                         <option value="3">Пункт 3</option>
                         <option value="4">Пункт 4</option>
@@ -153,10 +157,10 @@
                   <div class="options-product__label">Обработка клинка</div>
                   <div class="options-product__value">
                     <select name="form[]" class="form">
-                        <option value="1" selected>Пункт 1</option>
-                        <option value="2">Пункт 2</option>
-                        <option value="3">Пункт 3</option>
-                        <option value="4">Пункт 4</option>
+                        <option value="1" selected>Выбрать обработку клинка</option>
+                        <option value="2">Алмазная заточка</option>
+                        <option value="3">Алмазная заточка + полировка</option>
+                        <option value="4">Комплексная заточка</option>
                     </select>
                   </div>
                 </div>
@@ -191,7 +195,7 @@
               </div>
             </div>
             <div class="product__info product-info">
-              <div data-tabs class="product-info">
+              <div data-tabs="992" class="product-info">
                 <nav data-tabs-titles class="product-info__navigation">
                   <button type="button" class="product-info__title _tab-active">Таб №1</button>
                   <button type="button" class="product-info__title">Таб №2</button>

@@ -74,6 +74,14 @@
     // .body-footer__rules
     &__rules {
         max-width: rem(820);
+        a{
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover){
+                &:hover{
+                    color: crimson;
+                }
+            }
+        }
     }
     // .body-footer__copyright
     &__copyright {

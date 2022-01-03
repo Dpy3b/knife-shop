@@ -251,6 +251,9 @@
         justify-content: flex-start;
         @include adaptiveValue("gap", 60, 30);
         border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+        ._tab-spoller & {
+            display: none;
+        }
     }
     // .product-info__title
     &__title {
@@ -259,6 +262,9 @@
         line-height: math.div(24, 20);
         color: rgba(20, 20, 20, 0.5);
         position: relative;
+        ._tab-spoller & {
+            width: 100%;
+        }
         &._tab-active{
             &::after {
                 content: "";
@@ -277,5 +283,8 @@
     }
     // .product-info__body
     &__body {
+        ._tab-spoller & {
+            padding: rem(30) 0;
+        }
     }
 }
