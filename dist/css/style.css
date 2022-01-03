@@ -4135,6 +4135,9 @@ body.popup-show::after {
   padding-bottom: 23.474801061%;
   cursor: pointer;
 }
+.thumbs-images__slide-ibg.swiper-slide-thumb-active {
+  border: 4px solid #E8AA31;
+}
 
 .body-product {
   background: #FEFEFE;
