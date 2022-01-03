@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Каталог</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220103153654">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top top-header">
+				<div class="top-header__container">
+					<nav class="top-header__menu menu-top-header">
+						<ul data-da=".menu__body, 991.98" class="menu-top-header__list">
+							<li class="menu-top-header__item menu-top-header__item--catalog">
+								<a href="#!" class="menu-top-header__link menu-top-header__link--catalog">
+									<svg class="menu-top-header__link-icon">
+										<use xlink:href="img/sprite.svg#arrow-down"></use>
+									</svg>
+									Каталог товаров
+								</a>
+							</li>
+							<li class="menu-top-header__item">
+								<a href="#!" class="menu-top-header__link">О нас</a>
+							</li>
+							<li class="menu-top-header__item">
+								<a href="#!" class="menu-top-header__link">Оплата и доставка</a>
+							</li>
+							<li class="menu-top-header__item">
+								<a href="#!" class="menu-top-header__link">Новости</a>
+							</li>
+							<li class="menu-top-header__item">
+								<a href="#!" class="menu-top-header__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<a href="#!" class="top-header__cabinet">
+						<svg class="top-header__cabinet-icon">
+							<use xlink:href="img/sprite.svg#profile"></use>
+						</svg>
+						<span>Личный кабинет</span>
+					</a>
+					<nav hidden class="menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<div class="menu__body">
+
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="header__body body-header">
+				<div class="body-header__container">
+					<a href="#!" class="body-header__logo">
+						<svg class="body-header__logo-icon">
+							<use xlink:href="img/sprite.svg#logo"></use>
+						</svg>
+					</a>
+					<div data-da=".catalog-header__container, 479.98" class="body-header__search">
+						<form action="#" class="search-header">
+							<button type="button" class="search-header__button">
+								<svg class="search-header__button-icon">
+									<use xlink:href="img/sprite.svg#search"></use>
+								</svg>
+							</button>
+							<input type="text" autocomplete="off" placeholder="Поиск" name="form[]" data-error="Ошибка" class="search-header__input">
+						</form>
+					</div>
+					<div class="body-header__actions actions-header">
+						<a href="#!" class="actions-header__location">
+							<svg class="actions-header__location-icon">
+								<use xlink:href="img/sprite.svg#location"></use>
+							</svg>
+							Москва
+						</a>
+						<div data-da=".top-header__container, 991.98, first" class="actions-header__phones phones-header">
+							<div data-spollers class="phones-header__items">
+								<div class="phones-header__item">
+									<a href="tel:8-800-777-49-67" class="phones-header__phone">
+										<svg class="phones-header__phone-icon">
+											<use xlink:href="img/sprite.svg#phone"></use>
+										</svg>
+										<span>8-800-777-49-67</span>
+									</a>
+									<button type="button" data-spoller class="phones-header__arrow-down">
+										<svg class="phones-header__arrow-down-icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<ul class="phones-header__list">
+										<li>
+											<a href="tel:8-800-777-49-67" class="phones-header__phone" href="">8-800-777-49-67</a>
+										</li>
+										<li>
+											<a href="tel:8-800-777-49-67" class="phones-header__phone" href="">8-800-777-49-67</a>
+										</li>
+										<li>
+											<a href="tel:8-800-777-49-67" class="phones-header__phone" href="">8-800-777-49-67</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<button type="button" data-popup="#callback" class="phones-header__callback">Заказать звонок</button>
+						</div>
+						<a data-da=".top-header__container, 991.98, 2" href="#!" class="actions-header__favorite">
+							<svg class="actions-header__favorite-icon">
+								<use xlink:href="img/sprite.svg#love"></use>
+							</svg>
+						</a>
+						<a data-da=".top-header__container, 991.98, 2" href="#!" class="actions-header__cart cart-header">
+							<button class="cart-header__btn">
+								<svg class="cart-header__btn-icon">
+									<use xlink:href="img/sprite.svg#cart"></use>
+								</svg>
+								<span>0</span>
+							</button>
+							<div class="cart-header__body">
+								<div class="cart-header__summ">0р</div>
+								<div class="cart-header__link">Оформить заказ</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__catalog catalog-header">
+				<div class="catalog-header__container">
+					<div class="catalog-header__menu menu-catalog">
+						<button type="button" class="menu-catalog__back">
+							<svg class="menu-catalog__back-icon">
+								<use xlink:href="img/sprite.svg#arrow-back"></use>
+							</svg>
+							Назад
+						</button>
+						<ul class="menu-catalog__list">
+							<li class="menu-catalog__item">
+								<button type="button" data-parent="1" class="menu-catalog__link">Каталог ножей</button>
+							</li>
+							<li class="menu-catalog__item">
+								<button type="button" data-parent="2" class="menu-catalog__link">Клинковое оружие</button>
+							</li>
+							<li class="menu-catalog__item">
+								<button type="button" data-parent="3" class="menu-catalog__link">Сувенирные изделия</button>
+							</li>
+							<li class="menu-catalog__item">
+								<button type="button" data-parent="4" class="menu-catalog__link">Фонари ARMYTEK</button>
+							</li>
+							<li class="menu-catalog__item">
+								<button type="button" data-parent="5" class="menu-catalog__link">Сопуствующие товары</button>
+							</li>
+						</ul>
+						<div class="menu-catalog__submenu submenu-catalog">
+							<button type="button" class="submenu-catalog__back">
+								<svg class="submenu-catalog__back-icon">
+									<use xlink:href="img/sprite.svg#arrow-back"></use>
+								</svg>
+								Назад
+							</button>
+							<div class="submenu-catalog__container">
+								<div hidden data-submenu="1" class="submenu-catalog__block">
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Категория ножей</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Производство ножей</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Ножи по маркам стали</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Заточка и полировка ножей</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Ножевая мастерская</a>
+									</div>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Разделочные ножи</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Туристические ножи</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи охотничьи</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Булатные ножи</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из дамаска</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Тактического назначения</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Метательные ножи</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Мачете и кукри</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи кухонные</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи АИР</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи ЗИК</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи ЗЗОСС</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи РОСоружие</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи Оружейник</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Булат Сергея Баранова</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Булат Андрея Умерова</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи Златко</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи Стиль-М</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Оружейная компания</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 40х102С2М</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 95х18</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 100х13м</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 110х18м-ШД</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 50х14МФ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали AUS-8</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали К340</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали M390</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали ЭП-766</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Паста ГОИ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Алмазная паста</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Туристические ножи</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Бруски и камни для заточки</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Заточные системы</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножевые клинки</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Заготовки для ножей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Литье для ножей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Материалы для рукоятей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Уход за рукоятиями ножей</a>
+										</li>
+									</ul>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+								</div>
+								<div hidden data-submenu="2" class="submenu-catalog__block">
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Ножи по маркам стали</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Заточка и полировка ножей</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Ножевая мастерская</a>
+									</div>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 40х102С2М</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 95х18</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 100х13м</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 110х18м-ШД</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 50х14МФ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали AUS-8</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали К340</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали M390</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали ЭП-766</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Паста ГОИ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Алмазная паста</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Туристические ножи</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Бруски и камни для заточки</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Заточные системы</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножевые клинки</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Заготовки для ножей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Литье для ножей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Материалы для рукоятей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Уход за рукоятиями ножей</a>
+										</li>
+									</ul>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+								</div>
+								<div hidden data-submenu="3" class="submenu-catalog__block">
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Производство ножей</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Ножи по маркам стали</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Заточка и полировка ножей</a>
+									</div>
+									<div class="submenu-catalog__category">
+										<a href="#!" class="submenu-catalog__link-category">Ножевая мастерская</a>
+									</div>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи АИР</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи ЗИК</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи ЗЗОСС</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи РОСоружие</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи Оружейник</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Булат Сергея Баранова</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Булат Андрея Умерова</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи Златко</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи Стиль-М</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Оружейная компания</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 40х102С2М</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 95х18</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 100х13м</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 110х18м-ШД</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали 50х14МФ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали AUS-8</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали К340</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали M390</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножи из стали ЭП-766</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Паста ГОИ</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Алмазная паста</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Туристические ножи</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Бруски и камни для заточки</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Заточные системы</a>
+										</li>
+									</ul>
+									<ul class="submenu-catalog__list">
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Ножевые клинки</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Заготовки для ножей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Литье для ножей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Материалы для рукоятей</a>
+										</li>
+										<li class="submenu-catalog__item">
+											<a href="" class="submenu-catalog__link">Уход за рукоятиями ножей</a>
+										</li>
+									</ul>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+									<div class="submenu-catalog__footer">
+										<a href="#!" class="submenu-catalog__all">Смотреть все</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page page--inner">
+			<div class="page__header">
+				<div class="page__container">
+					<h1 class="page__title title">Разделочные ножи</h1>
+					<nav class="page__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="#!" class="breadcrumbs__link">Главная</a>
+								<svg class="breadcrumbs__icon">
+									<use xlink:href="img/sprite.svg#arrow-next"></use>
+								</svg>
+							</li>
+							<li class="breadcrumbs__item">
+								<span href="#!" class="breadcrumbs__current">Разделочные ножи</span>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="catalog">
+				<div class="catalog__container">
+					<div class="catalog__body">
+						<div class="catalog__filter filter-catalog">
+							<button type="button" class="filter-catalog__title">Фильтр товаров</button>
+							<div data-spollers class="filter-catalog__items">
+								<div class="filter-catalog__price price-filter">
+									<button type="button" data-spoller class="price-filter__title">
+										<span>Цена</span>
+										<svg class="price-filter__title-icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div data-range class="price-filter__body">
+										<div class="price-filter__inputs">
+											<input data-range-from="0" autocomplete="off" type="text" value="500" name="form[]" data-error="Ошибка" class="price-filter__input">
+											<input data-range-to="5000" autocomplete="off" type="text" value="1000" name="form[]" data-error="Ошибка" class="price-filter__input">
+										</div>
+										<div data-range-item class="price-filter__range"></div>
+									</div>
+								</div>
+								<div class="filter-catalog__item item-filter-catalog">
+									<button type="button" data-spoller class="item-filter-catalog__title">
+										<span>Производство</span>
+										<svg class="item-filter-catalog__title-icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div class="item-filter-catalog__body">
+										<div class="item-filter-catalog__checkbox checkbox">
+											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label"><span class="checkbox__text">АиР <small>(250)</small></span></label>
+										</div>
+										<div class="item-filter-catalog__checkbox checkbox">
+											<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_2" class="checkbox__label"><span class="checkbox__text">Булат Сергея Баранова <small>(17)</small></span></label>
+										</div>
+										<div class="item-filter-catalog__checkbox checkbox">
+											<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_3" class="checkbox__label"><span class="checkbox__text">Булат Умерова <small>(28)</small></span></label>
+										</div>
+										<div class="item-filter-catalog__checkbox checkbox">
+											<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_4" class="checkbox__label"><span class="checkbox__text">ЗЗОСС <small>(156)</small></span></label>
+										</div>
+										<div class="item-filter-catalog__checkbox checkbox">
+											<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_5" class="checkbox__label"><span class="checkbox__text">ЗИК <small>(170)</small></span></label>
+										</div>
+										<div class="item-filter-catalog__checkbox checkbox">
+											<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_6" class="checkbox__label"><span class="checkbox__text">ЗЛАТКО <small>(114)</small></span></label>
+										</div>
+										<div class="item-filter-catalog__checkbox checkbox">
+											<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_7" class="checkbox__label"><span class="checkbox__text">ЗлатПрофит <small>(230)</small></span></label>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="catalog__content">
+							<div class="catalog__control">
+								<select name="form[]" class="control">
+									<option value="1" selected>По популярности</option>
+									<option value="2">По цене</option>
+									<option value="3">По рейтингу</option>
+									<option value="4">По названию</option>
+								</select>
+							</div>
+							<div class="catalog__products">
+								<article class="products-card">
+									<div class="products-card__sale">-50%</div>
+									<a href="#!" class="products-card__image">
+										<span class="products-card__item-image-ibg products-card__item-image-ibg_contain">
+											<!-- по идее тут лучше див, уже можно по семантике -->
+											<picture><source srcset="img/mainpage/product-cart/image.webp"type="image/webp"><img src="img/mainpage/product-cart/image.png" alt=""></picture>
+										</span>
+									</a>
+									<div class="products-card__body">
+										<h4 class="products-card__title">
+											<a href="#!" class="products-card__link-title">Нож Лиса</a>
+										</h4>
+										<div class="products-card__info info-product-cart">
+											<div class="info-product-cart__size">95x18</div>
+											<div class="info-product-cart__materials">Орех, Алюминий</div>
+										</div>
+										<div class="products-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating"></input>
+													<input type="radio" class="rating__item" value="2" name="rating"></input>
+													<input type="radio" class="rating__item" value="3" name="rating"></input>
+													<input type="radio" class="rating__item" value="4" name="rating"></input>
+													<input type="radio" class="rating__item" value="5" name="rating"></input>
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="products-card__footer">
+											<div class="products-card__price">2 719р.</div>
+											<a href="#!" class="products-card__compare">
+												<svg class="products-card__compare-icon">
+													<use xlink:href="img/sprite.svg#compare"></use>
+												</svg>
+											</a>
+											<a href="#!" class="products-card__love">
+												<svg class="products-card__love-icon">
+													<use xlink:href="img/sprite.svg#love"></use>
+												</svg>
+											</a>
+										</div>
+										<button type="button" class="products-card__cart button">
+											<span>В корзину</span>
+											<svg class="products-card__cart-icon">
+												<use xlink:href="img/sprite.svg#cart-mini"></use>
+											</svg>
+										</button>
+
+									</div>
+								</article>
+								<article class="products-card">
+									<a href="#!" class="products-card__image">
+										<span class="products-card__item-image-ibg products-card__item-image-ibg_contain">
+											<!-- по идее тут лучше див, уже можно по семантике -->
+											<picture><source srcset="img/mainpage/product-cart/image.webp"type="image/webp"><img src="img/mainpage/product-cart/image.png" alt=""></picture>
+										</span>
+									</a>
+									<div class="products-card__body">
+										<h4 class="products-card__title">
+											<a href="#!" class="products-card__link-title">Нож Лиса</a>
+										</h4>
+										<div class="products-card__info info-product-cart">
+											<div class="info-product-cart__size">95x18</div>
+											<div class="info-product-cart__materials">Орех, Алюминий</div>
+										</div>
+										<div class="products-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating"></input>
+													<input type="radio" class="rating__item" value="2" name="rating"></input>
+													<input type="radio" class="rating__item" value="3" name="rating"></input>
+													<input type="radio" class="rating__item" value="4" name="rating"></input>
+													<input type="radio" class="rating__item" value="5" name="rating"></input>
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="products-card__footer">
+											<div class="products-card__price">2 719р.</div>
+											<a href="#!" class="products-card__compare">
+												<svg class="products-card__compare-icon">
+													<use xlink:href="img/sprite.svg#compare"></use>
+												</svg>
+											</a>
+											<a href="#!" class="products-card__love">
+												<svg class="products-card__love-icon">
+													<use xlink:href="img/sprite.svg#love"></use>
+												</svg>
+											</a>
+										</div>
+										<button type="button" class="products-card__cart button">
+											<span>В корзину</span>
+											<svg class="products-card__cart-icon">
+												<use xlink:href="img/sprite.svg#cart-mini"></use>
+											</svg>
+										</button>
+
+									</div>
+								</article>
+								<article class="products-card">
+									<a href="#!" class="products-card__image">
+										<span class="products-card__item-image-ibg products-card__item-image-ibg_contain">
+											<!-- по идее тут лучше див, уже можно по семантике -->
+											<picture><source srcset="img/mainpage/product-cart/image.webp"type="image/webp"><img src="img/mainpage/product-cart/image.png" alt=""></picture>
+										</span>
+									</a>
+									<div class="products-card__body">
+										<h4 class="products-card__title">
+											<a href="#!" class="products-card__link-title">Нож Лиса</a>
+										</h4>
+										<div class="products-card__info info-product-cart">
+											<div class="info-product-cart__size">95x18</div>
+											<div class="info-product-cart__materials">Орех, Алюминий</div>
+										</div>
+										<div class="products-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating"></input>
+													<input type="radio" class="rating__item" value="2" name="rating"></input>
+													<input type="radio" class="rating__item" value="3" name="rating"></input>
+													<input type="radio" class="rating__item" value="4" name="rating"></input>
+													<input type="radio" class="rating__item" value="5" name="rating"></input>
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="products-card__footer">
+											<div class="products-card__price">2 719р.</div>
+											<a href="#!" class="products-card__compare">
+												<svg class="products-card__compare-icon">
+													<use xlink:href="img/sprite.svg#compare"></use>
+												</svg>
+											</a>
+											<a href="#!" class="products-card__love">
+												<svg class="products-card__love-icon">
+													<use xlink:href="img/sprite.svg#love"></use>
+												</svg>
+											</a>
+										</div>
+										<button type="button" class="products-card__cart button">
+											<span>В корзину</span>
+											<svg class="products-card__cart-icon">
+												<use xlink:href="img/sprite.svg#cart-mini"></use>
+											</svg>
+										</button>
+
+									</div>
+								</article>
+								<article class="products-card">
+									<a href="#!" class="products-card__image">
+										<span class="products-card__item-image-ibg products-card__item-image-ibg_contain">
+											<!-- по идее тут лучше див, уже можно по семантике -->
+											<picture><source srcset="img/mainpage/product-cart/image.webp"type="image/webp"><img src="img/mainpage/product-cart/image.png" alt=""></picture>
+										</span>
+									</a>
+									<div class="products-card__body">
+										<h4 class="products-card__title">
+											<a href="#!" class="products-card__link-title">Нож Лиса</a>
+										</h4>
+										<div class="products-card__info info-product-cart">
+											<div class="info-product-cart__size">95x18</div>
+											<div class="info-product-cart__materials">Орех, Алюминий</div>
+										</div>
+										<div class="products-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating"></input>
+													<input type="radio" class="rating__item" value="2" name="rating"></input>
+													<input type="radio" class="rating__item" value="3" name="rating"></input>
+													<input type="radio" class="rating__item" value="4" name="rating"></input>
+													<input type="radio" class="rating__item" value="5" name="rating"></input>
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="products-card__footer">
+											<div class="products-card__price">2 719р.</div>
+											<a href="#!" class="products-card__compare">
+												<svg class="products-card__compare-icon">
+													<use xlink:href="img/sprite.svg#compare"></use>
+												</svg>
+											</a>
+											<a href="#!" class="products-card__love">
+												<svg class="products-card__love-icon">
+													<use xlink:href="img/sprite.svg#love"></use>
+												</svg>
+											</a>
+										</div>
+										<button type="button" class="products-card__cart button">
+											<span>В корзину</span>
+											<svg class="products-card__cart-icon">
+												<use xlink:href="img/sprite.svg#cart-mini"></use>
+											</svg>
+										</button>
+
+									</div>
+								</article>
+								<article class="products-card">
+									<a href="#!" class="products-card__image">
+										<span class="products-card__item-image-ibg products-card__item-image-ibg_contain">
+											<!-- по идее тут лучше див, уже можно по семантике -->
+											<picture><source srcset="img/mainpage/product-cart/image.webp"type="image/webp"><img src="img/mainpage/product-cart/image.png" alt=""></picture>
+										</span>
+									</a>
+									<div class="products-card__body">
+										<h4 class="products-card__title">
+											<a href="#!" class="products-card__link-title">Нож Лиса</a>
+										</h4>
+										<div class="products-card__info info-product-cart">
+											<div class="info-product-cart__size">95x18</div>
+											<div class="info-product-cart__materials">Орех, Алюминий</div>
+										</div>
+										<div class="products-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating"></input>
+													<input type="radio" class="rating__item" value="2" name="rating"></input>
+													<input type="radio" class="rating__item" value="3" name="rating"></input>
+													<input type="radio" class="rating__item" value="4" name="rating"></input>
+													<input type="radio" class="rating__item" value="5" name="rating"></input>
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="products-card__footer">
+											<div class="products-card__price">2 719р.</div>
+											<a href="#!" class="products-card__compare">
+												<svg class="products-card__compare-icon">
+													<use xlink:href="img/sprite.svg#compare"></use>
+												</svg>
+											</a>
+											<a href="#!" class="products-card__love">
+												<svg class="products-card__love-icon">
+													<use xlink:href="img/sprite.svg#love"></use>
+												</svg>
+											</a>
+										</div>
+										<button type="button" class="products-card__cart button">
+											<span>В корзину</span>
+											<svg class="products-card__cart-icon">
+												<use xlink:href="img/sprite.svg#cart-mini"></use>
+											</svg>
+										</button>
+
+									</div>
+								</article>
+								<article class="products-card">
+									<a href="#!" class="products-card__image">
+										<span class="products-card__item-image-ibg products-card__item-image-ibg_contain">
+											<!-- по идее тут лучше див, уже можно по семантике -->
+											<picture><source srcset="img/mainpage/product-cart/image.webp"type="image/webp"><img src="img/mainpage/product-cart/image.png" alt=""></picture>
+										</span>
+									</a>
+									<div class="products-card__body">
+										<h4 class="products-card__title">
+											<a href="#!" class="products-card__link-title">Нож Лиса</a>
+										</h4>
+										<div class="products-card__info info-product-cart">
+											<div class="info-product-cart__size">95x18</div>
+											<div class="info-product-cart__materials">Орех, Алюминий</div>
+										</div>
+										<div class="products-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating"></input>
+													<input type="radio" class="rating__item" value="2" name="rating"></input>
+													<input type="radio" class="rating__item" value="3" name="rating"></input>
+													<input type="radio" class="rating__item" value="4" name="rating"></input>
+													<input type="radio" class="rating__item" value="5" name="rating"></input>
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="products-card__footer">
+											<div class="products-card__price">2 719р.</div>
+											<a href="#!" class="products-card__compare">
+												<svg class="products-card__compare-icon">
+													<use xlink:href="img/sprite.svg#compare"></use>
+												</svg>
+											</a>
+											<a href="#!" class="products-card__love">
+												<svg class="products-card__love-icon">
+													<use xlink:href="img/sprite.svg#love"></use>
+												</svg>
+											</a>
+										</div>
+										<button type="button" class="products-card__cart button">
+											<span>В корзину</span>
+											<svg class="products-card__cart-icon">
+												<use xlink:href="img/sprite.svg#cart-mini"></use>
+											</svg>
+										</button>
+
+									</div>
+								</article>
+								<article class="products-card">
+									<a href="#!" class="products-card__image">
+										<span class="products-card__item-image-ibg products-card__item-image-ibg_contain">
+											<!-- по идее тут лучше див, уже можно по семантике -->
+											<picture><source srcset="img/mainpage/product-cart/image.webp"type="image/webp"><img src="img/mainpage/product-cart/image.png" alt=""></picture>
+										</span>
+									</a>
+									<div class="products-card__body">
+										<h4 class="products-card__title">
+											<a href="#!" class="products-card__link-title">Нож Лиса</a>
+										</h4>
+										<div class="products-card__info info-product-cart">
+											<div class="info-product-cart__size">95x18</div>
+											<div class="info-product-cart__materials">Орех, Алюминий</div>
+										</div>
+										<div class="products-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating"></input>
+													<input type="radio" class="rating__item" value="2" name="rating"></input>
+													<input type="radio" class="rating__item" value="3" name="rating"></input>
+													<input type="radio" class="rating__item" value="4" name="rating"></input>
+													<input type="radio" class="rating__item" value="5" name="rating"></input>
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="products-card__footer">
+											<div class="products-card__price">2 719р.</div>
+											<a href="#!" class="products-card__compare">
+												<svg class="products-card__compare-icon">
+													<use xlink:href="img/sprite.svg#compare"></use>
+												</svg>
+											</a>
+											<a href="#!" class="products-card__love">
+												<svg class="products-card__love-icon">
+													<use xlink:href="img/sprite.svg#love"></use>
+												</svg>
+											</a>
+										</div>
+										<button type="button" class="products-card__cart button">
+											<span>В корзину</span>
+											<svg class="products-card__cart-icon">
+												<use xlink:href="img/sprite.svg#cart-mini"></use>
+											</svg>
+										</button>
+
+									</div>
+								</article>
+								<article class="products-card">
+									<a href="#!" class="products-card__image">
+										<span class="products-card__item-image-ibg products-card__item-image-ibg_contain">
+											<!-- по идее тут лучше див, уже можно по семантике -->
+											<picture><source srcset="img/mainpage/product-cart/image.webp"type="image/webp"><img src="img/mainpage/product-cart/image.png" alt=""></picture>
+										</span>
+									</a>
+									<div class="products-card__body">
+										<h4 class="products-card__title">
+											<a href="#!" class="products-card__link-title">Нож Лиса</a>
+										</h4>
+										<div class="products-card__info info-product-cart">
+											<div class="info-product-cart__size">95x18</div>
+											<div class="info-product-cart__materials">Орех, Алюминий</div>
+										</div>
+										<div class="products-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating"></input>
+													<input type="radio" class="rating__item" value="2" name="rating"></input>
+													<input type="radio" class="rating__item" value="3" name="rating"></input>
+													<input type="radio" class="rating__item" value="4" name="rating"></input>
+													<input type="radio" class="rating__item" value="5" name="rating"></input>
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="products-card__footer">
+											<div class="products-card__price">2 719р.</div>
+											<a href="#!" class="products-card__compare">
+												<svg class="products-card__compare-icon">
+													<use xlink:href="img/sprite.svg#compare"></use>
+												</svg>
+											</a>
+											<a href="#!" class="products-card__love">
+												<svg class="products-card__love-icon">
+													<use xlink:href="img/sprite.svg#love"></use>
+												</svg>
+											</a>
+										</div>
+										<button type="button" class="products-card__cart button">
+											<span>В корзину</span>
+											<svg class="products-card__cart-icon">
+												<use xlink:href="img/sprite.svg#cart-mini"></use>
+											</svg>
+										</button>
+
+									</div>
+								</article>
+							</div>
+							<div class="catalog__footer">
+								<a href="#!" class="catalog__more button button--border">Показать больше</a>
+								<div class="catalog__pagging pagging">
+									<button disabled type="button" class="pagging__arrow pagging__arrow--left">
+										<svg class="pagging__arrow-icon pagging__arrow-icon--left">
+											<use xlink:href="img/sprite.svg#arrow-next"></use>
+										</svg>
+									</button>
+									<ul class="pagging__list">
+										<li class="pagging__item">
+											<a href="#!" class="pagging__link _active">1</a>
+										</li>
+										<li class="pagging__item">
+											<a href="#!" class="pagging__link">2</a>
+										</li>
+										<li class="pagging__item">
+											<a href="#!" class="pagging__link">3</a>
+										</li>
+										<li class="pagging__item">
+											<a href="#!" class="pagging__link">...</a>
+										</li>
+										<li class="pagging__item">
+											<a href="#!" class="pagging__link">15</a>
+										</li>
+									</ul>
+									<button type="button" class="pagging__arrow pagging__arrow--right">
+										<svg class="pagging__arrow-icon">
+											<use xlink:href="img/sprite.svg#arrow-next"></use>
+										</svg>
+									</button>
+
+
+								</div>
+							</div>
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">
+			<section class="footer__text text-footer">
+				<div class="text-footer__container">
+					<h1 class="text-footer__title">
+						Златоустовские ножи интернет-магазин "ЗЛАТМАКС"
+					</h1>
+					<div class="text-footer__text">
+						Наш интернет-магазин "ЗЛАТМАКС" предлагает Вам ножи очень высокого качества из города оружейников - Златоуста.
+						Златоустовские ножи известны и популярны среди потребителей как на российским рынке, так и за рубежом: ножи
+						охотничьи, хозяйственные, туристические, рыбацкие, складные и метательные. Нож Златоуста - это идеальный друг и
+						товарищ в повседневной жизни и в экстремальных ситуациях. На многую продукцию распространяется гарантия до 10
+						лет - это один из главных показателей качества. Для Вас на нашем сайте "zlatmax" предложен огромный ассортимент
+						Златоустовских ножей. Наши менеджеры помогут определиться и подобрать самый лучший Златоустовский нож,
+						ориентируясь на Ваши пожелания.
+					</div>
+				</div>
+			</section>
+			<div class="footer__container">
+				<div class="footer__body body-footer">
+					<div class="body-footer__row">
+						<div class="body-footer__item item-footer">
+							<div data-spollers="767.98" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__item">
+									<button type="button" data-spoller class="spoller-item-footer__title">
+										<span>Информация</span>
+										<svg class="spoller-item-footer__icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div class="spoller-item-footer__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Златоустовские ножи в Москве и Московской области</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Ножевые стали</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">О нас</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Условия оплаты и доставки</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Политика конфиденциальности</a>
+												</li>
+											</ul>
+										</nav>
+										<ul class="social-footer">
+											<li class="social-footer__item">
+												<a href="#!" class="social-footer__link">
+													<img class="social-footer__link-icon" src="img/facebook.svg" alt="">
+												</a>
+											</li>
+											<li class="social-footer__item">
+												<a href="#!" class="social-footer__link">
+													<img class="social-footer__link-icon" src="img/viber.svg" alt="">
+												</a>
+											</li>
+											<li class="social-footer__item">
+												<a href="#!" class="social-footer__link">
+													<img class="social-footer__link-icon" src="img/telegram.svg" alt="">
+												</a>
+											</li>
+											<li class="social-footer__item">
+												<a href="#!" class="social-footer__link">
+													<img class="social-footer__link-icon" src="img/whatsapp.svg" alt="">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="767.98" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__item">
+									<button type="button" data-spoller class="spoller-item-footer__title">
+										<span>Служба поддержки</span>
+										<svg class="spoller-item-footer__icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div class="spoller-item-footer__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Контактная информация</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Возврат товара</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Карта сайта</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="767.98" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__item">
+									<button type="button" data-spoller class="spoller-item-footer__title">
+										<span>Дополнительно</span>
+										<svg class="spoller-item-footer__icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div class="spoller-item-footer__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Подарочные сертификаты</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Партнеры</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Товары со скидкой</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="767.98" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__item">
+									<button type="button" data-spoller class="spoller-item-footer__title">
+										<span>Личный кабинет</span>
+										<svg class="spoller-item-footer__icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div class="spoller-item-footer__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Личный кабинет</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">История заказов</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Мои закладки</a>
+												</li>
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">Рассылка новостей</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="body-footer__row">
+						<div class="body-footer__item item-footer">
+							<div data-spollers="767.98" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__item">
+									<button type="button" data-spoller class="spoller-item-footer__title">
+										<span>Контакты</span>
+										<svg class="spoller-item-footer__icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div class="spoller-item-footer__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item">
+													<a href="tel:88007774967" class="menu-footer__link">
+														<svg class="menu-footer__link-icon">
+															<use xlink:href="img/sprite.svg#phone"></use>
+														</svg>
+														<span>8 (800) 777-49-67</span>
+													</a>
+												</li>
+												<li class="menu-footer__item">
+													<svg class="menu-footer__link-icon menu-footer__link-icon--schedule">
+														<use xlink:href="img/sprite.svg#schedule"></use>
+													</svg>
+													<span>Пн-Пт<br>7:00 - 16:00 (МСК)</span>
+												</li>
+
+												<li class="menu-footer__item">
+													<svg class="menu-footer__link-icon">
+														<use xlink:href="img/sprite.svg#location"></use>
+													</svg>
+													<span>Златоуст,<br>ул. Шоссейная,<br>д. 1, офис «6Б»</span>
+
+												</li>
+												<li class="menu-footer__item">
+													<a href="mailto:info@zlatmax.ru" class="menu-footer__link">
+														<svg class="menu-footer__link-icon">
+															<use xlink:href="img/sprite.svg#email"></use>
+														</svg>
+														<span>info@zlatmax.ru</span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="767.98" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__item">
+									<button type="button" data-spoller class="spoller-item-footer__title">
+										<span>Полезные ссылки</span>
+										<svg class="spoller-item-footer__icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div class="spoller-item-footer__body">
+										<nav class="menu-footer">
+											<ul class="menu-footer__list">
+												<li class="menu-footer__item">
+													<a href="#!" class="menu-footer__link">
+														<span>Способы оплаты и доставки</span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="767.98" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__item">
+									<button type="button" data-spoller class="spoller-item-footer__title">
+										<span>Наша гарантия</span>
+										<svg class="spoller-item-footer__icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<div class="spoller-item-footer__body">
+										<div class="spoller-item-footer__text">
+											Недовольны своей покупкой? Вы можете вернуть ее в течении 30 дней с даты получения, согласно <a href="#!">нашим правилам</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="767.98" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__item">
+									<button type="button" data-spoller class="spoller-item-footer__title">
+										<span>Новостная рассылка</span>
+										<svg class="spoller-item-footer__icon">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<form action="#" class="spoller-item-footer__body footer-subscribe">
+										<label for="subscribe-input" class="footer-subscribe__label">Подпишитесь прямо сейчас!</label>
+										<div class="footer-subscribe__line">
+											<input id="subscribe-input" autocomplete="off" type="text" name="form[]" data-error="Ошибка, поле не заполнено либо содержит недопустимые символы" data-required="email" placeholder="example@gmail.com" class="footer-subscribe__input">
+											<button type="submit" class="footer-subscribe__button button">
+												<svg class="footer-subscribe__button-icon">
+													<use xlink:href="img/sprite.svg#arrow-next"></use>
+												</svg>
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="body-footer__bottom">
+						<div class="body-footer__rules">
+							Все материалы, размещенные на сайте, носят справочный характер и не являются
+							публичной офертой, определяемойположениями Статьи 437 Гражданского кодекса Российской Федерации.
+							При копировании материалов гиперссылка на <a href="www.zlatmax.ru">www.zlatmax.ru</a> обязательна!
+						</div>
+						<div class="body-footer__copyright">
+							Златоустовские ножи <span>www.zlatmax.ru ©</span>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="callback" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">Закрыть</button>
+				<div class="popup__text">Заказать звонок</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/app.min.js?_v=20220103153654"></script>
+</body>
+
+</html>
